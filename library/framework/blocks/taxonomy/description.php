@@ -54,7 +54,7 @@ if ($term->slug == 'books') {
             </div>
         </section>
 
-        <!-- Others descriptions /-->
+        <!-- Books collections descriptions /-->
         <?php
 
         if ($term->slug == 'atlas-de-lo-extraordinario') {
@@ -68,6 +68,9 @@ if ($term->slug == 'books') {
         }
         if ($term->slug == 'duda-semanal') {
             require_once(get_template_directory() . '/library/framework/blocks/book/descriptions/duda-semanal.php');
+        }
+        if ($term->slug == 'coleccion-nigel-blundell') {
+          require_once(get_template_directory() . '/library/framework/blocks/book/descriptions/description-books-collection-nigel-blundell.php');
         }
         ?>
 
