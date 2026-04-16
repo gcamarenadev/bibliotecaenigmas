@@ -66,7 +66,6 @@ $quote = stripslashes($quote);
 $author = stripslashes($author);
 $authorExtra = stripslashes($authorExtra);
 
-echo $postId;
 ?>
 
 <!-- Title /-->
