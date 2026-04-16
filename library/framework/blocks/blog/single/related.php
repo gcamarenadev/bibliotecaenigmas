@@ -14,7 +14,6 @@
 
 <?php
 global $get_meta, $post, $do_not_duplicate;
-$original_post = $post;
 
 if ((tie_get_option('related') && empty($get_meta["tie_hide_related"][0])) || (isset($get_meta["tie_hide_related"][0]) && $get_meta["tie_hide_related"][0] == 'no')):
   $related_no = tie_get_option('related_number') ? tie_get_option('related_number') : 3;
@@ -42,25 +41,24 @@ if ((tie_get_option('related') && empty($get_meta["tie_hide_related"][0])) || (i
   if ($related_query->have_posts()) : $count = 0;
 
     $category = get_the_category();
-    $cat_id = $category[0]->cat_ID;
-    $res = get_category_parents($cat_id);
+    $categoryId = $category[0]->cat_ID;
+    $parentCategories = get_category_parents($categoryId);
 
-    if (str_contains($res, 'Blog forteano')) {
+    if (str_contains($parentCategories, 'Blog forteano')) {
       $tieIcon = 'tie_fortean';
-    } else if (str_contains($res, 'Blog del autor')) {
+    } else if (str_contains($parentCategories, 'Blog del autor')) {
       $tieIcon = 'tie_author';
-    } else if (str_contains($res, 'Cuentos del autor')) {
+    } else if (str_contains($parentCategories, 'Cuentos del autor')) {
       $tieIcon = 'tie_story';
     }
-
-?>
+    ?>
 
     <!--Title-->
     <section>
       <div class="tb-head">
         <h1>= Publicaciones relacionadas =</h1>
       </div>
-    </section><!--/Title-->
+    </section>
 
     <!--Content-->
     <section>
@@ -81,7 +79,7 @@ if ((tie_get_option('related') && empty($get_meta["tie_hide_related"][0])) || (i
                       <li class="fa overlay-icon tb-card-blog-overlay-icon "></li>
                     </a>
                   </div>
-                </div><!--/Thumbnail-->
+                </div>
 
                 <!--Title-->
                 <div class="tb-blog-related-item-title">
@@ -89,7 +87,7 @@ if ((tie_get_option('related') && empty($get_meta["tie_hide_related"][0])) || (i
                      rel="bookmark"><?php the_title() ?>
                     <span class='tb-blog-related-paragraph-end'></span>
                   </a>
-                </div><!--/Title-->
+                </div>
 
               </div><!--/.cols-->
 
@@ -99,12 +97,11 @@ if ((tie_get_option('related') && empty($get_meta["tie_hide_related"][0])) || (i
           </div><!--/.row-->
         </div><!--/.tb-blog-related-flex-->
       </div><!--/.tb-box-->
-    </section><!--/Content-->
+    </section>
 
     <div class="clear"></div>
 
   <?php
   endif;
-  $post = $original_post;
   wp_reset_query();
 endif; ?>

@@ -13,10 +13,13 @@
 ?>
 
 <?php
-global $postId, $postname;
+global $postId, $post;
+
+$isVisible = null;
+$firstPostRelatedToCurrentPost = null;
+
 $currentId = $post->ID;
 $currentCategory = wp_get_post_terms($post->ID, 'category', array('fields' => 'slugs'));
-
 $maximumRandomNumber = sizeof($currentCategory);
 
 if ($maximumRandomNumber < 1) {
@@ -31,7 +34,7 @@ $selectedGenre = $arrayGenresCheckAlso[$randomNumber];
 $arguments = array(
   'post_type' => 'post',
   'posts_per_page' => 1,
-  'orderby'        => 'rand',
+  'orderby' => 'rand',
   'tax_query' => array(
     array(
       'taxonomy' => 'category',
@@ -43,14 +46,13 @@ $arguments = array(
 
 $query = new WP_Query($arguments);
 $index = 0;
-$firstPostRelatedToCurrentPost = null;
+
 
 if ($query->have_posts()) {
   while ($query->have_posts()) {
 
     $query->the_post();
     $postId = $query->post->ID;
-    $postname = $query->post->post_name;
 
     // If the selected post is different to current post
     if ($postId != $currentId) {
@@ -72,7 +74,7 @@ if ($firstPostRelatedToCurrentPost) {
   $arguments = array(
     'post_type' => 'post',
     'posts_per_page' => 1,
-    'orderby'        => 'rand',
+    'orderby' => 'rand',
     'post__in' => $firstPostRelatedToCurrentPost,
     'tax_query' => array(
       array(
@@ -91,13 +93,13 @@ if ($firstPostRelatedToCurrentPost) {
 
 $category = get_the_category();
 $cat_id = $category[0]->cat_ID;
-$res = get_category_parents($cat_id);
+$parentCategories = get_category_parents($cat_id);
 
-if (str_contains($res, 'Blog forteano')) {
+if (str_contains($parentCategories, 'Blog forteano')) {
   $tieIcon = 'tie_fortean';
-} else if (str_contains($res, 'Blog del autor')) {
+} else if (str_contains($parentCategories, 'Blog del autor')) {
   $tieIcon = 'tie_author';
-} else if (str_contains($res, 'Cuentos del autor')) {
+} else if (str_contains($parentCategories, 'Cuentos del autor')) {
   $tieIcon = 'tie_story';
 }
 ?>
@@ -146,6 +148,7 @@ if (str_contains($res, 'Blog forteano')) {
         <?php endwhile; ?>
       </section>
 
+    </div>
   </section>
 
 <?php endif; ?>
