@@ -8,29 +8,23 @@
  * Path:               /library/framework/blocks/book/single/
  * File name:          check-also.php
  * Description:        This file shows the check also section of the single book page.
- * Date:               17-02-2026
+ * Date:               16-04-2026
  */
 ?>
 
 <?php
 global $post_id, $check_also_position;
 
-$isVisibleChekAlso = false;
+$isVisibleChekAlso = true;
 $currentPostId = $post->ID;
-$visibility = false;
-$firstPostIdRelatedToCurrentPosts = '';
 $idsGenresOfCurrentPost = [];
 $idsPostsSelected = [];
-$index = 0;
 
 $noCover = 'https://bibliotecaenigmas.com/wp-content/themes/sahifa/library/images/images/no-book-cover.jpg';
 $postId = $post->ID;
 
 # Get all genres
 $termsOfCurrentPost = get_the_terms($postId, 'genre');
-
-# Check if It has thumbnail image
-$hasThumbnail = (has_post_thumbnail($postId));
 
 # Select icon for Multimedia or Book section
 if ($termsOfCurrentPost) {
@@ -52,13 +46,13 @@ if (!$checkStatus == 'yes') {
 $idsGenresOfCurrentPost = wp_get_post_terms($post->ID, 'genre', array('fields' => 'ids'));
 
 # If array is empty not continue
-if (!isset($idsGenresOfCurrentPost)) {
+if (!empty($idsGenresOfCurrentPost)) {
 
   # Get total genres of current post
   $totalGenresOfCurrentPost = sizeof($idsGenresOfCurrentPost);
 
 # Get random number between 0 to total genres of current post
-  if ($totalGenresOfCurrentPost <= 1) {
+  if ($totalGenresOfCurrentPost < 1) {
     $randomNumber = 0;
   } else {
     $randomNumber = rand(0, $totalGenresOfCurrentPost - 1);
@@ -94,7 +88,7 @@ if (!isset($idsGenresOfCurrentPost)) {
   $totalIdsPostsSelected = sizeof($idsPostsSelected);
 
 # Get random number between 0 to total posts selected
-  if ($totalIdsPostsSelected <= 1) {
+  if ($totalIdsPostsSelected < 1) {
     $randomNumber = 0;
   } else {
     $isVisibleChekAlso = true; // If ids post select <= 1 is visible check also module
@@ -119,7 +113,6 @@ if (!isset($idsGenresOfCurrentPost)) {
     $imageUrl = $noCover;
   }
 }
-
 ?>
 
 <?php if ($isVisibleChekAlso): ?>
