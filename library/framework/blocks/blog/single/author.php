@@ -8,31 +8,31 @@
    * Path:               /library/framework/blocks/blog/single/
    * File name:          author.php
    * Description:        This file contains the author section of a blog post page.
-   * Date:               25-08-2025
+   * Date:               16-04-2026
    */
 ?>
 
 <section>
   <div id="author-box">
 
-    <!-- Title /-->
+    <!--Title-->
     <section>
       <div class="tb-head">
         <h1>= Acerca del autor =</h1>
       </div>
     </section>
 
+    <!--Content-->
     <section>
       <div class="tb-box">
 
-        <!-- Introducing /-->
+        <!--Introducing-->
         <section>
           <?php function tie_author_box_ ($avatar = true, $social = true, $name = false, $user_id = false)
           {
-            if ($avatar) :
-              ?>
+            if ($avatar) :  ?>
 
-              <!-- Gavatar -->
+              <!--Gavatar-->
               <section>
                 <div class="author-avatar">
                   <?php echo get_avatar (get_the_author_meta ('user_email', $user_id), 90); ?>
@@ -41,7 +41,7 @@
             
             <?php endif; ?>
 
-            <!-- Description -->
+            <!--Description-->
             <section>
               <div class="author-description">
                 <?php if (!empty($name)) : ?>
@@ -60,7 +60,6 @@
 
       </div>
     </section>
-
 
   </div>
 </section>
