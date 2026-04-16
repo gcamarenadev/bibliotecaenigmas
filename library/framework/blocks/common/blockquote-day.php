@@ -65,6 +65,8 @@ if ($authorExtra == 'Sin información.') {
 $quote = stripslashes($quote);
 $author = stripslashes($author);
 $authorExtra = stripslashes($authorExtra);
+
+echo $postId;
 ?>
 
 <!-- Title /-->
@@ -85,7 +87,7 @@ $authorExtra = stripslashes($authorExtra);
       </blockquote>
     </section>
 
-    <?php if ($postId = 812): ?>
+    <?php if ($postId == 812): // Only home page ?>
 
       <!-- Button /-->
       <section>
