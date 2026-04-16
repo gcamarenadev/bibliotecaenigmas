@@ -21,6 +21,7 @@ $nextPost = get_next_post(true);
 <section>
   <div class="post-navigation">
 
+    <!--Next post link-->
     <?php if (!empty($nextPost)): ?>
       <div class="post-next">
         <a href="<?php echo get_permalink($nextPost->ID) ?>">
@@ -31,6 +32,7 @@ $nextPost = get_next_post(true);
       </div>
     <?php endif; ?>
 
+    <!--Previous post link-->
     <?php if (!empty($previousPost)): ?>
       <div class="post-previous">
         <a href="<?php echo get_permalink($previousPost->ID); ?>">

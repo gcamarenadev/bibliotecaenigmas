@@ -12,8 +12,6 @@
  */
 ?>
 
-
-
 <section>
   <div class="tb-meta-box">
 

@@ -31,7 +31,7 @@ if (str_contains($res, 'Blog forteano')) {
       <a href="<?php echo tie_thumb_src('tie-large'); ?>" class="fancybox image"
          aria-controls="fancybox-wrap" aria-haspopup="dialog">
         <img src="<?php echo tie_thumb_src('tie-large'); ?>"
-             alt=""
+             alt="<?php the_title(); ?>"
              width="auto"
              height="auto"
              title="<?php the_title(); ?>"
