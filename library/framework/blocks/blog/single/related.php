@@ -8,7 +8,7 @@
  * Path:               /library/framework/blocks/blog/single/
  * File name:          related.php
  * Description:        This file contains the related section of a blog post page.
- * Date:               25-11-2025
+ * Date:               16-04-2026
  */
 ?>
 
@@ -41,27 +41,11 @@ if ((tie_get_option('related') && empty($get_meta["tie_hide_related"][0])) || (i
   $related_query = new wp_query($args);
   if ($related_query->have_posts()) : $count = 0;
 
-    # Get post id
-    $postId = $post->ID;
+    $category = get_the_category();
+    $cat_id = $category[0]->cat_ID;
+    $res = get_category_parents($cat_id);
 
-    echo $postId;
-    echo '<br>';
-
-    # Get all genres
-    //$allCategories = get_the_terms($postId, 'category');
-
-    //$parentCategoryId = $allCategories[0]->parent;
-
-   // $post_id = 1000;
-   $cat = get_the_category($postId);
-    print_r($cat);
-
-    //$category = get_category($cat);
-$parent_id = $cat[0]->category_parent;
-echo $parent_id;
-
-
-/*    if (str_contains($res, 'Blog forteano')) {
+    if (str_contains($res, 'Blog forteano')) {
       $tieIcon = 'tie_fortean';
     } else if (str_contains($res, 'Blog del autor')) {
       $tieIcon = 'tie_author';
@@ -69,24 +53,7 @@ echo $parent_id;
       $tieIcon = 'tie_story';
     }
 
-
-
-    # Select icon for Multimedia or Book section
-    if ($allCategories) {
-      if ($parentCategoryId == 1491) {
-        $classCodeTie = 'tie_story';
-      } elseif ($parentCategoryId == 1492) {
-        $classCodeTie = 'tie_book';
-      }
-    }*/
-
-    # Check post status
-    $checkStatus = get_post_meta($post->ID, 'be_theme_check', true);
-    if (!$checkStatus == 'yes') {
-      $classCodeTie = 'tie_check';
-    }
-
-    ?>
+?>
 
     <!--Title-->
     <section>
@@ -108,10 +75,10 @@ echo $parent_id;
 
                 <!--Thumbnail-->
                 <div class="tb-blog-related-item">
-                  <div class="post-thumbnail tb-blog-related-item-thumbnail tie-appear">
+                  <div class="post-thumbnail <?php echo $tieIcon; ?> tb-blog-related-item-thumbnail tie-appear">
                     <a href="<?php the_permalink(); ?>" rel="bookmark">
                       <?php the_post_thumbnail(); ?>
-                      <li class="fa overlay-icon tb-card-blog-overlay-icon"></li>
+                      <li class="fa overlay-icon tb-card-blog-overlay-icon "></li>
                     </a>
                   </div>
                 </div><!--/Thumbnail-->
@@ -135,7 +102,6 @@ echo $parent_id;
     </section><!--/Content-->
 
     <div class="clear"></div>
-
 
   <?php
   endif;
