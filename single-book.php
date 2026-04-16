@@ -91,6 +91,11 @@ if ($sidebarHidden == 'yes') {
               <!-- La escóbula de la brújula /-->
               <?php get_template_part('library/framework/blocks/book/descriptions/description-escobula-de-la-brujula'); ?>
 
+            <?php elseif ($postId == 19762): ?>
+
+              <!-- Cuarto Milenio /-->
+              <?php get_template_part('library/framework/blocks/book/descriptions/description-cuarto-milenio'); ?>
+
             <?php elseif ($postId == 19774): ?>
 
               <!-- TVN Chile, OVNI /-->

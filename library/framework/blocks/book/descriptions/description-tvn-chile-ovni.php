@@ -50,7 +50,6 @@ echo do_shortcode('[wp-datatable id="table" fat="LEVEL"]
 
     <thead>
     <tr>
-      <th>PORTADA</th>
       <th>VISTO</th>
       <th>NO.</th>
       <th>EP.</th>
@@ -70,38 +69,6 @@ echo do_shortcode('[wp-datatable id="table" fat="LEVEL"]
       ?>
 
       <tr>
-
-        <!-- PROTADAS /-->
-        <td style="width: 20px; padding: 10px;">
-          <?php
-          $imageString = $fila->no;
-          if ($imageString != 'No existe') {
-
-            $fullImagePath = 'https://bibliotecaenigmas.com/wp-content/themes/sahifa/library/images/covers/tvn-chile/' . $imageString . '.jpg';
-            $smallImagePath = 'https://bibliotecaenigmas.com/wp-content/themes/sahifa/library/images/covers/tvn-chile/small/' . $imageString . '.jpg';
-
-          } else {
-            $fullImagePath = 'https://bibliotecaenigmas.com/wp-content/themes/sahifa/library/images/covers/no-cover-book.jpg';
-            $smallImagePath = 'https://bibliotecaenigmas.com/wp-content/themes/sahifa/library/images/covers/no-cover-book-small.jpg';
-          }
-
-          ?>
-
-          <div class="post-thumbnail tie_play tb-book-thumbnail tie-appear" style="margin-bottom: 0; width: 95px;">
-            <a href="<?php echo $fullImagePath; ?>"
-               class="fancybox image"
-               style="width: 95px;"
-               aria-controls="fancybox-wrap"
-               aria-haspopup="dialog">
-              <img style="width: 95px;  border: 0 solid #dbdbdb;"
-                   src="<?php echo $smallImagePath; ?>"
-                   title="<?php echo $fila->titulo; ?>"
-                   class="tie-appear"
-                   alt="<?php echo $fila->titulo; ?>">
-              <li class="fa overlay-icon"></li>
-            </a>
-          </div>
-        </td>
 
         <!-- VISTO /-->
         <td><?php echo $fila->visto; ?></td>
@@ -135,7 +102,6 @@ echo do_shortcode('[wp-datatable id="table" fat="LEVEL"]
 
     <tfoot>
     <tr>
-      <th>PORTADA</th>
       <th>VISTO</th>
       <th>NO.</th>
       <th>EP.</th>
