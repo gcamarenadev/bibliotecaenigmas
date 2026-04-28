@@ -432,11 +432,11 @@
                 }
               },
               {
-                text: 'Guillermo Camarena ∴',
+                text: 'G∴ C∴',
                 icon: ' be-ico_sections_gcamarenaprog',
                 onclick: function () {
 
-                  editor.insertContent('<p style="text-align: right;"><strong>Guillermo Camarena ∴</strong></p>');
+                  editor.insertContent('<p style="text-align: center;"><strong>G∴ C∴</strong></p>');
                 }
               },
               {
@@ -444,7 +444,7 @@
                 icon: ' be-ico_sections_library',
                 onclick: function () {
 
-                  editor.insertContent('<p style="text-align: right;"><strong>Biblioteca Enigmas ∴</strong></p>');
+                  editor.insertContent('<p style="text-align: center;"><strong>Biblioteca Enigmas ∴</strong></p>');
                 }
               },
               {
@@ -455,9 +455,9 @@
                   const date = String(today.getDate()).padStart(2, '0') + '-' +
                     String(today.getMonth() + 1).padStart(2, '0') + '-' +
                     today.getFullYear();
-                  editor.insertContent('<p style="text-align: right;"><strong>Fecha: ' + date + ' / 03:33 </strong><br>' +
+                  editor.insertContent('<p style="text-align: center;"><strong>Fecha: ' + date + ' / 03:33 </strong><br>' +
                     '<strong>Ilustración: Generada por Gemini AI </strong><br>' +
-                    '<strong>Autor: Guillermo Camarena ∴</strong></p>');
+                    '<strong>Autor: G∴ C∴</strong></p>');
                 }
               },
             ]
@@ -691,6 +691,24 @@
                         label: 'IMG1 Texto',
                         value: 'Texto',
                         placeholder: 'Texto'
+                      },
+                      {
+                        type: 'label',
+                        html: '<legend>Alineación:</legend>\n' +
+                          '  <div style="margin-left: 1px; margin-bottom: 1px;">\n' +
+                          '   <input type="radio" id="der-izq" name="align" value="der-izq" checked />\n' +
+                          '   <label for="der-izq">' +
+                          '     <i class="mce-ico mce-i- be-ico_imgs_left"  style="width: 20px;"></i>' +
+                          '     <i class="mce-ico mce-i- be-ico_imgs_right" style="width: 20px;"></i>' +
+                          '   </label>\n' +
+                          '  </div>\n'+
+                          '  <div style="margin-left: 1px; margin-bottom: 1px;">\n' +
+                          '   <input type="radio" id="izq-der" name="align" value="izq-der" checked />\n' +
+                          '   <label for="izq-der">' +
+                          '     <i class="mce-ico mce-i- be-ico_imgs_right"  style="width: 20px;"></i>' +
+                          '     <i class="mce-ico mce-i- be-ico_imgs_left" style="width: 20px;"></i>' +
+                          '   </label>\n' +
+                          '  </div>'
                       },
                       {
                         type: 'textbox',
@@ -1871,7 +1889,7 @@
                   const date = String(today.getDate()).padStart(2, '0') + '-' +
                     String(today.getMonth() + 1).padStart(2, '0') + '-' +
                     today.getFullYear();
-                  editor.insertContent('<p style="text-align: right;">Actualización: <strong>' + date + '</strong></p>' +
+                  editor.insertContent('<p style="text-align: center;">Actualización: <strong>' + date + '</strong></p>' +
                     '&nbsp;');
                 }
               },
