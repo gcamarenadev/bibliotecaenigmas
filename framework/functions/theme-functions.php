@@ -1076,6 +1076,8 @@
       'no_found_rows' => true,
       'ignore_sticky_posts' => true
     );
+
+    $count = 0;
     
     $get_posts_query = new WP_Query($args);
     
@@ -1084,7 +1086,7 @@
         <!--/Thumbnail-->
         <?php if (function_exists ("has_post_thumbnail") && has_post_thumbnail () && $thumb) : ?>
           <div class="post-thumbnail">
-            <a style="width: 130px;"
+            <a style="width: 118px;"
                href="<?php echo get_permalink ($post->ID) ?>"
                title="<?php the_title_attribute () ?>"
                rel="bookmark"><?php the_post_thumbnail ('tie-medium'); ?>
@@ -1124,8 +1126,11 @@
 
         </li>
 
-        <hr>
-      <?php
+        <?php if($count < 4): ?>
+          <hr>
+        <?php endif; ?>
+        <?php
+        $count++;
       endwhile;
     endif;
     
@@ -1261,13 +1266,27 @@
     );
     
     $get_posts_query = new WP_Query($args);
+
+    $category = get_the_category();
+    $cat_id = $category[0]->cat_ID;
+    $categoryParents = get_category_parents($cat_id);
+
+    if (str_contains($categoryParents, 'Blog forteano')) {
+      $tieIcon = 'tie_fortean';
+    } else if (str_contains($categoryParents, 'Blog del autor')) {
+      $tieIcon = 'tie_author';
+    } else if (str_contains($categoryParents, 'Cuentos del autor')) {
+      $tieIcon = 'tie_story';
+    }
+
+    $count = 0;
     
     if ($get_posts_query->have_posts ()):
       while ($get_posts_query->have_posts ()) : $get_posts_query->the_post () ?>
         <!--/Thumbnail-->
         <?php if (function_exists ("has_post_thumbnail") && has_post_thumbnail () && $thumb) : ?>
-          <div class="post-thumbnail">
-            <a style="width: 130px;"
+          <div class="post-thumbnail <?php echo $tieIcon; ?>">
+            <a style="width: 118px;"
                href="<?php echo get_permalink ($post->ID) ?>"
                title="<?php the_title_attribute () ?>"
                rel="bookmark"><?php the_post_thumbnail ('tie-medium'); ?>
@@ -1307,8 +1326,11 @@
 
         </li>
 
-        <hr>
+        <?php if($count < 4): ?>
+          <hr>
+        <?php endif; ?>
       <?php
+      $count++;
       endwhile;
     endif;
     
@@ -1335,11 +1357,12 @@
     );
     
     $popularposts = new WP_Query($args);
+
     if ($popularposts->have_posts ()):
       while ($popularposts->have_posts ()) : $popularposts->the_post () ?>
         <li <?php tie_post_class (); ?>>
           <?php if (function_exists ("has_post_thumbnail") && has_post_thumbnail () && $thumb) : ?>
-            <div class="post-thumbnail">
+            <div class="post-thumbnail <?php echo $tieIcon; ?>">
               <a href="<?php the_permalink () ?>" title="<?php the_title_attribute () ?>"
                  rel="bookmark"><?php the_post_thumbnail ('tie-small'); ?><span class="fa overlay-icon"></span></a>
             </div><!-- post-thumbnail /-->
@@ -1378,13 +1401,28 @@
     );
     
     $popularposts = new WP_Query($args);
+
+    $category = get_the_category();
+    $cat_id = $category[0]->cat_ID;
+    $categoryParents = get_category_parents($cat_id);
+
+    if (str_contains($categoryParents, 'Blog forteano')) {
+      $tieIcon = 'tie_fortean';
+    } else if (str_contains($categoryParents, 'Blog del autor')) {
+      $tieIcon = 'tie_author';
+    } else if (str_contains($categoryParents, 'Cuentos del autor')) {
+      $tieIcon = 'tie_story';
+    }
+
+    $count = 0;
+
     if ($popularposts->have_posts ()):
       while ($popularposts->have_posts ()) : $popularposts->the_post () ?>
 
         <!--/Thumbnail-->
         <?php if (function_exists ("has_post_thumbnail") && has_post_thumbnail () && $thumb) : ?>
-          <div class="post-thumbnail">
-            <a style="width: 130px;"
+          <div class="post-thumbnail <?php echo $tieIcon; ?>">
+            <a style="width: 118px;"
                href="<?php echo get_permalink ($post->ID) ?>"
                title="<?php the_title_attribute () ?>"
                rel="bookmark"><?php the_post_thumbnail ('tie-medium'); ?>
@@ -1424,9 +1462,11 @@
 
         </li>
 
-        <hr>
-      
-      <?php
+        <?php if($count < 4): ?>
+          <hr>
+        <?php endif; ?>
+        <?php
+        $count++;
       endwhile;
     endif;
     

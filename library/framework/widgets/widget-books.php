@@ -8,7 +8,7 @@
    * Path:               /library/framework/widgets/
    * File name:          widget-books.php
    * Description:        This file contains the code for the book list widget.
-   * Date:               25-08-2025
+   * Date:               27-04-2026
    */
   
   // Widget initialization and register
@@ -65,7 +65,6 @@
       
       $date = !empty($instance['date']) ? $instance['date'] : false;
       $views = !empty($instance['views']) ? $instance['views'] : false;
-      $likes = !empty($instance['likes']) ? $instance['likes'] : false;
       
       echo $before_widget;
       echo $before_title;
@@ -75,7 +74,7 @@
 
       <ul>
         <?php
-          widgetListOfBooks ($numberOfPosts, $thumb, $date, $views, $likes, $postsOrder);
+          widgetListOfBooks ($numberOfPosts, $thumb, $date, $views, $postsOrder);
         ?>
       </ul>
       <div class="clear"></div>
@@ -100,7 +99,6 @@
       $instance['thumb'] = !empty($new_instance['thumb']) ? $new_instance['thumb'] : false;
       $instance['date'] = !empty($new_instance['date']) ? $new_instance['date'] : false;
       $instance['views'] = !empty($new_instance['views']) ? $new_instance['views'] : false;
-      $instance['likes'] = !empty($new_instance['likes']) ? $new_instance['likes'] : false;
       return $instance;
     }
     
@@ -113,7 +111,7 @@
      */
     public function form ($instance)
     {
-      $defaults = array('title' => __ ('Recent Posts', 'tie'), 'no_of_posts' => '5', 'posts_order' => 'latest', 'thumb' => 'true', 'date' => 'true', 'views' => 'true', 'likes' => 'true');
+      $defaults = array('title' => __ ('Recent Posts', 'tie'), 'no_of_posts' => '5', 'posts_order' => 'latest', 'thumb' => 'true', 'date' => 'true', 'views' => 'true');
       $instance = wp_parse_args ((array)$instance, $defaults); ?>
 
       <p>
@@ -178,10 +176,6 @@
                value="true" <?php if (!empty($instance['views']))
           echo 'checked="checked"'; ?> type="checkbox"/>
 
-        <label for="<?php echo $this->get_field_id ('likes'); ?>"><?php _e ('Show likes:', 'tie') ?></label>
-        <input id="<?php echo $this->get_field_id ('likes'); ?>" name="<?php echo $this->get_field_name ('likes'); ?>"
-               value="true" <?php if (!empty($instance['likes']))
-          echo 'checked="checked"'; ?> type="checkbox"/>
       </p>
       
       <?php

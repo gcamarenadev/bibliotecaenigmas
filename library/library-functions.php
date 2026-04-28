@@ -218,10 +218,10 @@ function getStyleSheetDirectoryUrl($filename): void
     $url = '/library/css/template-be.css';
   }
   wp_enqueue_style(
-      'custom-style',
-      get_stylesheet_directory_uri() . $url,
-      array(),
-      wp_get_theme()->get('Version')
+    'custom-style',
+    get_stylesheet_directory_uri() . $url,
+    array(),
+    wp_get_theme()->get('Version')
   );
 }
 
@@ -276,32 +276,32 @@ add_action('admin_enqueue_scripts', 'enqueueCustomStylesAdmin');
  * Register genre taxonomy sidebar
  */
 register_sidebar(
-    array(
-        'name' => 'Sidebar Géneros',
-        'id' => 'sidebar-genres',
-        'description' => 'The Genres Taxonomy widget area',
-        'class' => '',
-        'before_widget' => '<div id="%1$s" class="widget %2$s">',
-        'after_widget' => '</div></div><!-- .widget /-->',
-        'before_title' => '<div class="widget-top"><h4>',
-        'after_title' => '</h4><div class="stripe-line"></div></div><div class="widget-container">'
-    )
+  array(
+    'name' => 'Sidebar Géneros',
+    'id' => 'sidebar-genres',
+    'description' => 'The Genres Taxonomy widget area',
+    'class' => '',
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'after_widget' => '</div></div><!-- .widget /-->',
+    'before_title' => '<div class="widget-top"><h4>',
+    'after_title' => '</h4><div class="stripe-line"></div></div><div class="widget-container">'
+  )
 );
 
 /**
  * Register sitemap sidebar
  */
 register_sidebar(
-    array(
-        'name' => 'Sidebar Sitemap',
-        'id' => 'sidebar-sitemap',
-        'description' => 'The Sitemap Taxonomy widget area',
-        'class' => '',
-        'before_widget' => '<div id="%1$s" class="widget %2$s">',
-        'after_widget' => '</div></div><!-- .widget /-->',
-        'before_title' => '<div class="widget-top"><h4>',
-        'after_title' => '</h4><div class="stripe-line"></div></div><div class="widget-container">'
-    )
+  array(
+    'name' => 'Sidebar Sitemap',
+    'id' => 'sidebar-sitemap',
+    'description' => 'The Sitemap Taxonomy widget area',
+    'class' => '',
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'after_widget' => '</div></div><!-- .widget /-->',
+    'before_title' => '<div class="widget-top"><h4>',
+    'after_title' => '</h4><div class="stripe-line"></div></div><div class="widget-container">'
+  )
 );
 
 # ----------------------------------------------------------------------------------------------------------------
@@ -322,13 +322,36 @@ register_sidebar(
  * @param string $type
  * @return void
  */
-function widgetListOfBooks(int $postsNumber = 5, bool $thumb = true, bool $date = true, bool $views = true, bool $likes = true, string $type = ''): void
+function widgetListOfBooks(int $postsNumber = 5, bool $thumb = true, bool $date = true, bool $views = true, string $type = ''): void
 {
   global $post;
   $originalPost = $post;
+  $postId = $post->ID;
 
-  if ($type == 'popular') {
-    $arguments = array(
+  $allGenres = get_the_terms($postId, 'genre');
+
+  # Select icon for Multimedia or Book section
+  if ($allGenres) {
+    $parentGenreId = $allGenres[0]->parent;
+    if ($parentGenreId == 1523) {
+      $classCodeTie = 'tie_play';
+    } else {
+      $classCodeTie = 'tie_book';
+    }
+  }
+
+# Check post status
+  $checkStatus = get_post_meta($post->ID, 'be_theme_check', true);
+  if (!$checkStatus == 'yes') {
+    $classCodeTie = 'tie_check';
+  }
+
+  $parentGenreId = $allGenres[0]->parent;
+
+  if ($parentGenreId == 1804) {
+
+    if ($type == 'popular') {
+      $arguments = array(
         'orderby' => 'meta_value_num',
         'post_type' => 'book',
         'meta_key' => 'tie_views',
@@ -336,10 +359,19 @@ function widgetListOfBooks(int $postsNumber = 5, bool $thumb = true, bool $date 
         'post_status' => 'publish',
         'no_found_rows' => true,
         'ignore_sticky_posts' => true,
-    );
-  }
-  if ($type == 'random') {
-    $arguments = array(
+        'tax_query' => array(
+          array(
+            'taxonomy' => 'genre',
+            'field' => 'term_id',
+            'terms' => array(1804), // Parent ID
+            'include_children' => true,      // Set to false to exclude sub-categories
+            'operator' => 'IN',
+          ),
+        ),
+      );
+    }
+    if ($type == 'random') {
+      $arguments = array(
         'orderby' => 'rand',
         'post_type' => 'book',
         'meta_key' => 'tie_views',
@@ -347,20 +379,102 @@ function widgetListOfBooks(int $postsNumber = 5, bool $thumb = true, bool $date 
         'post_status' => 'publish',
         'no_found_rows' => true,
         'ignore_sticky_posts' => true,
-    );
-  }
-  if ($type == 'recent') {
-    $arguments = array(
+        'tax_query' => array(
+          array(
+            'taxonomy' => 'genre',
+            'field' => 'term_id',
+            'terms' => array(1804), // Parent ID
+            'include_children' => true,      // Set to false to exclude sub-categories
+            'operator' => 'IN',
+          ),
+        ),
+      );
+    }
+    if ($type == 'recent') {
+      $arguments = array(
         'orderby' => 'desc',
         'post_type' => 'book',
         'posts_per_page' => $postsNumber,
         'post_status' => 'publish',
         'no_found_rows' => true,
         'ignore_sticky_posts' => true,
-    );
+        'tax_query' => array(
+          array(
+            'taxonomy' => 'genre',
+            'field' => 'term_id',
+            'terms' => array(1804), // Parent ID
+            'include_children' => true,      // Set to false to exclude sub-categories
+            'operator' => 'IN',
+          ),
+        ),
+      );
+    }
+
+  } else {
+
+    if ($type == 'popular') {
+      $arguments = array(
+        'orderby' => 'meta_value_num',
+        'post_type' => 'book',
+        'meta_key' => 'tie_views',
+        'posts_per_page' => $postsNumber,
+        'post_status' => 'publish',
+        'no_found_rows' => true,
+        'ignore_sticky_posts' => true,
+        'tax_query' => array(
+          array(
+            'taxonomy' => 'genre',
+            'field' => 'term_id',
+            'terms' => array(1523), // Parent ID
+            'include_children' => true,      // Set to false to exclude sub-categories
+            'operator' => 'IN',
+          ),
+        ),
+      );
+    }
+    if ($type == 'random') {
+      $arguments = array(
+        'orderby' => 'rand',
+        'post_type' => 'book',
+        'meta_key' => 'tie_views',
+        'posts_per_page' => $postsNumber,
+        'post_status' => 'publish',
+        'no_found_rows' => true,
+        'ignore_sticky_posts' => true,
+        'tax_query' => array(
+          array(
+            'taxonomy' => 'genre',
+            'field' => 'term_id',
+            'terms' => array(1523), // Parent ID
+            'include_children' => true,      // Set to false to exclude sub-categories
+            'operator' => 'IN',
+          ),
+        ),
+      );
+    }
+    if ($type == 'recent') {
+      $arguments = array(
+        'orderby' => 'desc',
+        'post_type' => 'book',
+        'posts_per_page' => $postsNumber,
+        'post_status' => 'publish',
+        'no_found_rows' => true,
+        'ignore_sticky_posts' => true,
+        'tax_query' => array(
+          array(
+            'taxonomy' => 'genre',
+            'field' => 'term_id',
+            'terms' => array(1523), // Parent ID
+            'include_children' => true,      // Set to false to exclude sub-categories
+            'operator' => 'IN',
+          ),
+        ),
+      );
+    }
   }
 
   $selectedPosts = new WP_Query($arguments);
+  $count = 0;
 
   if ($selectedPosts->have_posts()) :
     while ($selectedPosts->have_posts()) : $selectedPosts->the_post() ?>
@@ -373,22 +487,20 @@ function widgetListOfBooks(int $postsNumber = 5, bool $thumb = true, bool $date 
 
       <!--/Thumbnail-->
       <?php if (function_exists("has_post_thumbnail") && has_post_thumbnail() && $thumb) : ?>
-        <?php $be_theme_check = get_post_meta($post->ID, 'be_theme_check', true);
-        if ($be_theme_check == 'yes') {
-          $tie = 'tie_book_small';
-        } else {
-          $tie = 'tie_check_small';
-        }
-        ?>
-        <div class="post-thumbnail <?php echo $tie; ?> tie-appear mr0 pr10 pb10">
-          <a href="<?php the_permalink(); ?>" rel="bookmark">
-            <img src="<?php echo tie_thumb_src('tie-library'); ?>" alt="" style="width: 66px;">
-            <li class="fa overlay-icon"></li>
-          </a>
-        </div>
+        <section>
+          <div class="post-thumbnail  <?php echo $classCodeTie; ?> tie-appear" style="width: 75px;">
+            <a href="<?php echo tie_thumb_src('tie_library'); ?>"
+               class="fancybox image"
+               aria-controls="fancybox-wrap"
+               aria-haspopup="dialog">
+              <img src="<?php echo tie_thumb_src('tie-library'); ?>" alt="">
+              <li class="fa overlay-icon"></li>
+            </a>
+          </div>
+        </section>
       <?php endif; ?>
 
-      <li <?php tie_post_class(); ?> >
+      <li <?php tie_post_class(); ?> style="padding-top: 10px;">
 
         <!-- Title /-->
         <span class="widget-book-title">
@@ -402,8 +514,8 @@ function widgetListOfBooks(int $postsNumber = 5, bool $thumb = true, bool $date 
 
         <!--/Genres-->
         <span class="post-views-widget widget-book-genres">
-               <i class="fa-solid fa-arrow-down-a-z"></i><?php echo get_the_term_list($post->ID, 'genre', '', ', ', ''); ?>
-            </span>
+          <i class="fa-solid fa-arrow-down-a-z"></i><?php echo get_the_term_list($post->ID, 'genre', '', ', ', ''); ?>
+        </span>
 
         <!-- Date /-->
         <?php if ($date) : ?>
@@ -424,7 +536,10 @@ function widgetListOfBooks(int $postsNumber = 5, bool $thumb = true, bool $date 
 
       </li>
 
-      <hr>
+      <?php $count++;
+      if ($count < 5): ?>
+        <hr  style="margin-bottom: 3px !important; margin-top: 3px !important;">
+      <?php endif; ?>
 
     <?php
     endwhile;
