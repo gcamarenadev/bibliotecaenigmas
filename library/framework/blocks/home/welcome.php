@@ -37,7 +37,7 @@
     <section class="mb10">
       <blockquote class="mt10">
         <p> "Vivimos una grandiosa novela, en un gran teatro, montado por gente inteligente que le gusta jugar a
-          las marionetas”. <br><strong>— Guillermo Camarena.·. </strong></p>
+          las marionetas”. <br><strong>— G.·. C.·. </strong></p>
       </blockquote>
     </section>
 
