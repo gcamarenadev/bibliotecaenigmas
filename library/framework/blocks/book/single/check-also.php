@@ -63,15 +63,15 @@ if (!empty($idsGenresOfCurrentPost)) {
 
 # Query of 10 posts with the selected genre
   $args = array(
-      'post_type' => 'book',
-      'posts_per_page' => 10,
-      'tax_query' => array(
-          array(
-              'taxonomy' => 'genre',
-              'field' => 'term_id',
-              'terms' => $selectedGenre,
-          ),
+    'post_type' => 'book',
+    'posts_per_page' => 10,
+    'tax_query' => array(
+      array(
+        'taxonomy' => 'genre',
+        'field' => 'term_id',
+        'terms' => $selectedGenre,
       ),
+    ),
   );
 
   $query = new WP_Query($args);
@@ -95,22 +95,26 @@ if (!empty($idsGenresOfCurrentPost)) {
     $randomNumber = rand(0, $totalIdsPostsSelected - 1);
   }
 
-# Select post with random number
-  $selectedPost = $idsPostsSelected[$randomNumber];
+  if (!empty($idsPostsSelected[$randomNumber])) {
+    # Select post with random number
+    $selectedPost = $idsPostsSelected[$randomNumber];
 
 # Get book or multimedia post data
-  $fullTitle = get_the_title($selectedPost);
-  $title = getTitle($fullTitle);
-  $subtitle = getSubtitle($fullTitle);
-  $writer = get_the_taxonomies($selectedPost);
-  $writer = cleanWriterTextOfTaxonomies($writer);
+    $fullTitle = get_the_title($selectedPost);
+    $title = getTitle($fullTitle);
+    $subtitle = getSubtitle($fullTitle);
+    $writer = get_the_taxonomies($selectedPost);
+    $writer = cleanWriterTextOfTaxonomies($writer);
 
 # Get thumbnail image url
-  $imageUrl = getThumbnailUrl('tie-book', $selectedPost);
+    $imageUrl = getThumbnailUrl('tie-book', $selectedPost);
 
 # If no exist thumbnail image
-  if (!$imageUrl) {
-    $imageUrl = $noCover;
+    if (!$imageUrl) {
+      $imageUrl = $noCover;
+    }
+  }else {
+    $isVisibleChekAlso = false;
   }
 }
 ?>
