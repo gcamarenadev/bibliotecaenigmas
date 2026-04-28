@@ -28,8 +28,7 @@ $termsOfCurrentPost = get_the_terms($postId, 'genre');
 
 # Select icon for Multimedia or Book section
 if ($termsOfCurrentPost) {
-  $parentGenreIdOfCurrentPost = $termsOfCurrentPost[0]->parent;
-  if ($parentGenreIdOfCurrentPost == 1523) {
+  if (in_array("1523", $termsOfCurrentPost)) {
     $classCodeTie = 'tie_play';
   } else {
     $classCodeTie = 'tie_book';

@@ -29,8 +29,7 @@ $hasThumbnail = (has_post_thumbnail($postId));
 
 # Select icon for Multimedia or Book section
 if ($allGenres) {
-  $parentGenreId = $allGenres[0]->parent;
-  if ($parentGenreId == 1523) {
+  if (in_array("1523", $allGenres)) {
     $classCodeTie = 'tie_play';
   } else {
     $classCodeTie = 'tie_book';
