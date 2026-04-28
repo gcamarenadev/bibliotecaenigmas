@@ -1076,16 +1076,28 @@
       'no_found_rows' => true,
       'ignore_sticky_posts' => true
     );
-
-    $count = 0;
     
     $get_posts_query = new WP_Query($args);
+
+    $category = get_the_category();
+    $cat_id = $category[0]->cat_ID;
+    $categoryParents = get_category_parents($cat_id);
+
+    if (str_contains($categoryParents, 'Blog forteano')) {
+      $tieIcon = 'tie_fortean';
+    } else if (str_contains($categoryParents, 'Blog del autor')) {
+      $tieIcon = 'tie_author';
+    } else if (str_contains($categoryParents, 'Cuentos del autor')) {
+      $tieIcon = 'tie_story';
+    }
+
+    $count = 0;
     
     if ($get_posts_query->have_posts ()):
       while ($get_posts_query->have_posts ()) : $get_posts_query->the_post () ?>
         <!--/Thumbnail-->
         <?php if (function_exists ("has_post_thumbnail") && has_post_thumbnail () && $thumb) : ?>
-          <div class="post-thumbnail">
+          <div class="post-thumbnail <?php echo $tieIcon; ?>">
             <a style="width: 118px;"
                href="<?php echo get_permalink ($post->ID) ?>"
                title="<?php the_title_attribute () ?>"
