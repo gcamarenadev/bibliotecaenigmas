@@ -1,12 +1,15 @@
 <?php
-/*
-	Template: 		Biblioteca Enigmas
-	writer: 			Guillermo Camarena
-	Section: 			Template / Framework / Functions
-	File name: 		breadcrumbs.php
-	Date: 				20-04-2024
-	Description: 	This file has the breadcrumbs generator function
-  */
+/**
+ * Template Name:      Biblioteca Enigmas
+ * Theme URI:          https://github.com/gcamarenaprog/bibliotecaenigmas
+ * Description Theme:  Sahifa theme personalized for bibliotecaenigmas.com website!
+ * Author:             Guillermo Camarena
+ * Author URL:         http://gcamarenaprog.com
+ * Path:               /template/framework/functions
+ * File name:          breadcrumbs.php
+ * Description:        This file has the breadcrumbs generator function
+ * Date:               28-04-2026
+ */
 ?>
 
 <?php
@@ -26,12 +29,12 @@ if (!function_exists('tie_breadcrumbs')) {
     }
 
     // breadcrumbs
-    $delimiter   = tie_get_option('breadcrumbs_delimiter') ? wp_kses_post(tie_get_option('breadcrumbs_delimiter')) : '&raquo;';
-    $delimiter   = '<span class="delimiter">' . $delimiter . '</span>';
-    $home_icon   = '<span class="fa fa-home" aria-hidden="true"></span>';
-    $home_text   =  __ti('Home');
-    $before      = '<span class="current">';
-    $after       = '</span>';
+    $delimiter = tie_get_option('breadcrumbs_delimiter') ? wp_kses_post(tie_get_option('breadcrumbs_delimiter')) : '&raquo;';
+    $delimiter = '<span class="delimiter">' . $delimiter . '</span>';
+    $home_icon = '<span class="fa fa-home" aria-hidden="true"></span>';
+    $home_text = __ti('Home');
+    $before = '<span class="current">';
+    $after = '</span>';
     $breadcrumbs = array();
 
     // bbPress breadcrumbs
@@ -40,30 +43,28 @@ if (!function_exists('tie_breadcrumbs')) {
       add_filter('bbp_no_breadcrumb', '__return_false');
 
       $args = array(
-        'before'         => '<nav id="crumbs" class="bbp-breadcrumb">',
-        'after'          => '</nav>',
-        'sep'            => $delimiter,
-        'sep_before'     => '',
-        'sep_after'      => '',
-        'home_text'      => $home_icon . ' ' . $home_text,
+        'before' => '<nav id="crumbs" class="bbp-breadcrumb">',
+        'after' => '</nav>',
+        'sep' => $delimiter,
+        'sep_before' => '',
+        'sep_after' => '',
+        'home_text' => $home_icon . ' ' . $home_text,
         'current_before' => $before,
-        'current_after'  => $after,
+        'current_after' => $after,
       );
 
       echo bbp_get_breadcrumb($args);
-    }
-
-    // WordPress breadcrumbs
+    } // WordPress breadcrumbs
     elseif (!is_home() && !is_front_page() || is_paged()) {
 
-      $post     = get_post();
+      $post = get_post();
       $home_url = esc_url(home_url('/'));
 
       // Home
       $breadcrumbs[] = array(
-        'url'   => $home_url,
-        'name'  => $home_text,
-        'icon'  => $home_icon,
+        'url' => $home_url,
+        'name' => $home_text,
+        'icon' => $home_icon,
       );
 
       // Taxonomy @be_changed
@@ -71,28 +72,37 @@ if (!function_exists('tie_breadcrumbs')) {
 
         $taxonomy = $queried_object->taxonomy; // @be_changed
 
-        $breadcrumbs[] = array(
-          'url'  => 'https://bibliotecaenigmas.com/books',
-          'name' => 'Libros',
-        );
+        global $wp;
+        $current_url = home_url(add_query_arg(array(), $wp->request));
 
-        if ($taxonomy == 'genre') {
+        $postId = $post->ID;
+        $allGenres = get_the_terms($postId, 'genre');
+
+        if (in_array("1523", $allGenres)) {
           $breadcrumbs[] = array(
-            'url'  => 'https://bibliotecaenigmas.com/busqueda-por-generos/',
-            'name' => 'Género',
+            'url' => 'https://bibliotecaenigmas.com/books',
+            'name' => 'Libros',
           );
+
+          if ($taxonomy == 'genre') {
+            $breadcrumbs[] = array(
+              'url' => 'https://bibliotecaenigmas.com/busqueda-rapida-por-generos/',
+              'name' => 'Género',
+            );
+          }
         }
+
 
         if ($taxonomy == 'writer') {
           $breadcrumbs[] = array(
-            'url'  => 'https://bibliotecaenigmas.com/busqueda-por-autores/',
+            'url' => 'https://bibliotecaenigmas.com/busqueda-rapida-por-autores/',
             'name' => 'Autor',
           );
         }
 
         if ($taxonomy == 'editorial') {
           $breadcrumbs[] = array(
-            'url'  => 'https://bibliotecaenigmas.com/busqueda-por-editoriales/',
+            'url' => 'https://bibliotecaenigmas.com/busqueda-rapida-por-editoriales/',
             'name' => 'Editorial',
           );
         }
@@ -118,7 +128,7 @@ if (!function_exists('tie_breadcrumbs')) {
 
           foreach ($parent_categories as $parent_category) {
             $breadcrumbs[] = array(
-              'url'  => get_category_link($parent_category),
+              'url' => get_category_link($parent_category),
               'name' => get_cat_name($parent_category),
             );
           }
@@ -127,56 +137,46 @@ if (!function_exists('tie_breadcrumbs')) {
         $breadcrumbs[] = array(
           'name' => get_cat_name($category->cat_ID),
         );
-      }
-
-      // Day
+      } // Day
       elseif (is_day()) {
 
         $breadcrumbs[] = array(
-          'url'  => get_year_link(get_the_time('Y')),
+          'url' => get_year_link(get_the_time('Y')),
           'name' => get_the_time('Y'),
         );
 
         $breadcrumbs[] = array(
-          'url'  => get_month_link(get_the_time('Y'), get_the_time('m')),
+          'url' => get_month_link(get_the_time('Y'), get_the_time('m')),
           'name' => get_the_time('F'),
         );
 
         $breadcrumbs[] = array(
           'name' => get_the_time('d'),
         );
-      }
-
-      // Month
+      } // Month
       elseif (is_month()) {
 
         $breadcrumbs[] = array(
-          'url'  => get_year_link(get_the_time('Y')),
+          'url' => get_year_link(get_the_time('Y')),
           'name' => get_the_time('Y'),
         );
 
         $breadcrumbs[] = array(
           'name' => get_the_time('F'),
         );
-      }
-
-      // Year
+      } // Year
       elseif (is_year()) {
 
         $breadcrumbs[] = array(
           'name' => get_the_time('Y'),
         );
-      }
-
-      // Tag
+      } // Tag
       elseif (is_tag()) {
 
         $breadcrumbs[] = array(
           'name' => get_the_archive_title(),
         );
-      }
-
-      // Author
+      } // Author
       elseif (is_author()) {
 
         $author = get_queried_object();
@@ -184,46 +184,38 @@ if (!function_exists('tie_breadcrumbs')) {
         $breadcrumbs[] = array(
           'name' => $author->display_name,
         );
-      }
-
-      // Search
+      } // Search
       elseif (is_search()) {
 
         $breadcrumbs[] = array(
-          'name' => sprintf(__ti('Search Results for: %s'),  get_search_query()),
+          'name' => sprintf(__ti('Search Results for: %s'), get_search_query()),
         );
-      }
-
-      // 404
+      } // 404
       elseif (is_404()) {
 
         $breadcrumbs[] = array(
           'name' => __ti('No Results'),
         );
-      }
-
-      // BuddyPress
+      } // BuddyPress
       elseif (function_exists('bp_current_component') && bp_current_component()) {
 
         $breadcrumbs[] = array(
           'name' => get_the_title(),
         );
-      }
-
-      // Pages
+      } // Pages
       elseif (is_page()) {
 
         if ($post->post_parent) {
 
-          $parent_id   = $post->post_parent;
+          $parent_id = $post->post_parent;
           $page_parents = array();
 
           while ($parent_id) {
-            $get_page  = get_page($parent_id);
+            $get_page = get_page($parent_id);
             $parent_id = $get_page->post_parent;
 
             $page_parents[] = array(
-              'url'  => get_permalink($get_page->ID),
+              'url' => get_permalink($get_page->ID),
               'name' => get_the_title($get_page->ID),
             );
           }
@@ -233,7 +225,7 @@ if (!function_exists('tie_breadcrumbs')) {
           foreach ($page_parents as $single_page) {
 
             $breadcrumbs[] = array(
-              'url'  => $single_page['url'],
+              'url' => $single_page['url'],
               'name' => $single_page['name'],
             );
           }
@@ -242,16 +234,14 @@ if (!function_exists('tie_breadcrumbs')) {
         $breadcrumbs[] = array(
           'name' => get_the_title(),
         );
-      }
-
-      // Attachment
+      } // Attachment
       elseif (is_attachment()) {
 
         if (!empty($post->post_parent)) {
           $parent = get_post($post->post_parent);
 
           $breadcrumbs[] = array(
-            'url'  => get_permalink($parent),
+            'url' => get_permalink($parent),
             'name' => $parent->post_title,
           );
         }
@@ -259,9 +249,7 @@ if (!function_exists('tie_breadcrumbs')) {
         $breadcrumbs[] = array(
           'name' => get_the_title(),
         );
-      }
-
-      // Single Posts
+      } // Single Posts
       elseif (is_singular()) {
 
         // Single Post
@@ -278,20 +266,18 @@ if (!function_exists('tie_breadcrumbs')) {
 
               foreach ($parent_categories as $parent_category) {
                 $breadcrumbs[] = array(
-                  'url'  => get_category_link($parent_category),
+                  'url' => get_category_link($parent_category),
                   'name' => get_cat_name($parent_category),
                 );
               }
             }
 
             $breadcrumbs[] = array(
-              'url'  => get_category_link($category->term_id),
+              'url' => get_category_link($category->term_id),
               'name' => get_cat_name($category->term_id),
             );
           }
-        }
-
-        // Custom Post Type @be_changed
+        } // Custom Post Type @be_changed
         else {
 
           // Get the main Post type archive link
@@ -301,13 +287,25 @@ if (!function_exists('tie_breadcrumbs')) {
 
             if ($post_type->labels->singular_name == 'Libro') {
 
-              $breadcrumbs[] = array(
-                'url'  => 'https://bibliotecaenigmas.com/books/',
-                'name' => 'Libros',
-              );
+              $postId = $post->ID;
+              $allGenres = get_the_terms($postId, 'genre');
+
+              if (in_array("1523", $allGenres)) {
+                $breadcrumbs[] = array(
+                  'url' => 'https://bibliotecaenigmas.com/books/',
+                  'name' => 'Libros',
+                );
+              } else {
+                $breadcrumbs[] = array(
+                  'url' => 'https://bibliotecaenigmas.com/genre/multimedia/',
+                  'name' => 'Multimedia',
+                );
+              }
+
+
             } else {
               $breadcrumbs[] = array(
-                'url'  => $archive_link,
+                'url' => $archive_link,
                 'name' => $post_type->labels->singular_name,
               );
             }
@@ -331,7 +329,7 @@ if (!function_exists('tie_breadcrumbs')) {
             if (!empty($custom_terms) && !is_wp_error($custom_terms)) {
               foreach ($custom_terms as $term) {
                 $breadcrumbs[] = array(
-                  'url'  => get_term_link($term),
+                  'url' => get_term_link($term),
                   'name' => $term->name,
                 );
                 break;
@@ -340,9 +338,22 @@ if (!function_exists('tie_breadcrumbs')) {
           }
         }
 
-        $breadcrumbs[] = array(
-          'name' => get_the_title(),
-        );
+        # Get full title
+        $fullTitle = get_the_title();
+
+        if (str_contains($fullTitle, '|')) {
+          $titleBook = getTitle($fullTitle);
+          $subtitleBook = getSubtitle($fullTitle);
+          $titleBook_ = substr($titleBook, 0, -1);
+          $fullTitle = $titleBook_ . ',' . $subtitleBook;
+          $breadcrumbs[] = array(
+            'name' => $fullTitle,
+          );
+        } else {
+          $breadcrumbs[] = array(
+            'name' => get_the_title(),
+          );
+        }
       }
 
       // --
@@ -367,8 +378,8 @@ if (!function_exists('tie_breadcrumbs')) {
         $item_list_elements = array();
         $breadcrumbs_schema = array(
           '@context' => 'http://schema.org',
-          '@type'    => 'BreadcrumbList',
-          '@id'      => '#Breadcrumb',
+          '@type' => 'BreadcrumbList',
+          '@id' => '#Breadcrumb',
         );
 
         echo '<nav id="crumbs">';
@@ -381,18 +392,18 @@ if (!function_exists('tie_breadcrumbs')) {
             $icon = !empty($item['icon']) ? $item['icon'] . ' ' : '';
             echo '<a href="' . esc_url($item['url']) . '">' . $icon . $item['name'] . '</a>' . $delimiter;
           } else {
-            echo ($before . $item['name'] . $after);
+            echo($before . $item['name'] . $after);
 
             global $wp;
             $item['url'] = esc_url(home_url(add_query_arg(array(), $wp->request)));
           }
 
           $item_list_elements[] = array(
-            '@type'    => 'ListItem',
+            '@type' => 'ListItem',
             'position' => $counter,
-            'item'     => array(
+            'item' => array(
               'name' => str_replace('<span class="fa fa-home" aria-hidden="true"></span> ', '', $item['name']),
-              '@id'  => $item['url'],
+              '@id' => $item['url'],
             )
           );
         }
@@ -422,11 +433,11 @@ add_filter('woocommerce_breadcrumb_defaults', 'tie_wc_breadcrumbs_args');
 function tie_wc_breadcrumbs_args()
 {
   return array(
-    'delimiter'   => '<span class="delimiter">' . (tie_get_option('breadcrumbs_delimiter') ? wp_kses_post(tie_get_option('breadcrumbs_delimiter')) : '&raquo;') . '</span>',
+    'delimiter' => '<span class="delimiter">' . (tie_get_option('breadcrumbs_delimiter') ? wp_kses_post(tie_get_option('breadcrumbs_delimiter')) : '&raquo;') . '</span>',
     'wrap_before' => '<nav id="crumbs" class="woocommerce-breadcrumb" itemprop="breadcrumb">',
-    'wrap_after'  => '</nav>',
-    'home'        => ' ' . __ti('Home'),
-    'before'      => '',
-    'after'       => '',
+    'wrap_after' => '</nav>',
+    'home' => ' ' . __ti('Home'),
+    'before' => '',
+    'after' => '',
   );
 }
