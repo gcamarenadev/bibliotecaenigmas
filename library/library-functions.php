@@ -318,7 +318,6 @@ register_sidebar(
  * @param bool $thumb
  * @param bool $date
  * @param bool $views
- * @param bool $likes
  * @param string $type
  * @return void
  */
@@ -344,9 +343,6 @@ function widgetListOfBooks(int $postsNumber = 5, bool $thumb = true, bool $date 
   if (!$checkStatus == 'yes') {
     $classCodeTie = 'tie_check';
   }
-
-  $parentGenreId = $allGenres[0]->parent;
-
   if (in_array("1804", $allGenres)) {
 
     if ($type == 'popular') {
@@ -472,6 +468,7 @@ function widgetListOfBooks(int $postsNumber = 5, bool $thumb = true, bool $date 
     }
   }
 
+
   $selectedPosts = new WP_Query($arguments);
   $count = 0;
 
@@ -537,7 +534,7 @@ function widgetListOfBooks(int $postsNumber = 5, bool $thumb = true, bool $date 
 
       <?php $count++;
       if ($count < 5): ?>
-        <hr  style="margin-bottom: 3px !important; margin-top: 3px !important;">
+        <hr style="margin-bottom: 3px !important; margin-top: 3px !important;">
       <?php endif; ?>
 
     <?php
