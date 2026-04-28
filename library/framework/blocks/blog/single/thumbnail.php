@@ -14,13 +14,13 @@
 global $get_meta;
 $category = get_the_category();
 $cat_id = $category[0]->cat_ID;
-$res = get_category_parents($cat_id);
+$categoryParents = get_category_parents($cat_id);
 
-if (str_contains($res, 'Blog forteano')) {
+if (str_contains($categoryParents, 'Blog forteano')) {
   $tieIcon = 'tie_fortean';
-} else if (str_contains($res, 'Blog del autor')) {
+} else if (str_contains($categoryParents, 'Blog del autor')) {
   $tieIcon = 'tie_author';
-} else if (str_contains($res, 'Cuentos del autor')) {
+} else if (str_contains($categoryParents, 'Cuentos del autor')) {
   $tieIcon = 'tie_story';
 }
 ?>
