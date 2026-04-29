@@ -453,40 +453,41 @@ function widgetListOfBooks(int $postsNumber = 5, bool $thumb = true, bool $date 
         );
       }
 
-    }
-  } else {
+    }else {
 
-    if ($type == 'popular') {
-      $arguments = array(
-        'orderby' => 'meta_value_num',
-        'post_type' => 'book',
-        'meta_key' => 'tie_views',
-        'posts_per_page' => $postsNumber,
-        'post_status' => 'publish',
-        'no_found_rows' => true,
-        'ignore_sticky_posts' => true,
-      );
-    }
-    if ($type == 'random') {
-      $arguments = array(
-        'orderby' => 'rand',
-        'post_type' => 'book',
-        'meta_key' => 'tie_views',
-        'posts_per_page' => $postsNumber,
-        'post_status' => 'publish',
-        'no_found_rows' => true,
-        'ignore_sticky_posts' => true,
-      );
-    }
-    if ($type == 'recent') {
-      $arguments = array(
-        'orderby' => 'desc',
-        'post_type' => 'book',
-        'posts_per_page' => $postsNumber,
-        'post_status' => 'publish',
-        'no_found_rows' => true,
-        'ignore_sticky_posts' => true,
-      );
+      if ($type == 'popular') {
+        $arguments = array(
+          'orderby' => 'meta_value_num',
+          'post_type' => 'book',
+          'meta_key' => 'tie_views',
+          'posts_per_page' => $postsNumber,
+          'post_status' => 'publish',
+          'no_found_rows' => true,
+          'ignore_sticky_posts' => true,
+        );
+      }
+      if ($type == 'random') {
+        $arguments = array(
+          'orderby' => 'rand',
+          'post_type' => 'book',
+          'meta_key' => 'tie_views',
+          'posts_per_page' => $postsNumber,
+          'post_status' => 'publish',
+          'no_found_rows' => true,
+          'ignore_sticky_posts' => true,
+        );
+      }
+      if ($type == 'recent') {
+        $arguments = array(
+          'orderby' => 'desc',
+          'post_type' => 'book',
+          'posts_per_page' => $postsNumber,
+          'post_status' => 'publish',
+          'no_found_rows' => true,
+          'ignore_sticky_posts' => true,
+        );
+      }
+
     }
 
   }
