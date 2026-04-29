@@ -116,6 +116,10 @@ if (!empty($idsGenresOfCurrentPost)) {
     $isVisibleChekAlso = false;
   }
 }
+
+if(!isset($selectedPost)){
+  $isVisibleChekAlso = false;
+}
 ?>
 
 <?php if ($isVisibleChekAlso): ?>

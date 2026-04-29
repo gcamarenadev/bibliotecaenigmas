@@ -290,18 +290,24 @@ if (!function_exists('tie_breadcrumbs')) {
               $postId = $post->ID;
               $allGenres = get_the_terms($postId, 'genre');
 
-              if (in_array("1523", $allGenres)) {
+              if($allGenres){
+                if (in_array("1523", $allGenres)) {
+                  $breadcrumbs[] = array(
+                    'url' => 'https://bibliotecaenigmas.com/books/',
+                    'name' => 'Libros',
+                  );
+                } else {
+                  $breadcrumbs[] = array(
+                    'url' => 'https://bibliotecaenigmas.com/genre/multimedia/',
+                    'name' => 'Multimedia',
+                  );
+                }
+              }else{
                 $breadcrumbs[] = array(
-                  'url' => 'https://bibliotecaenigmas.com/books/',
-                  'name' => 'Libros',
-                );
-              } else {
-                $breadcrumbs[] = array(
-                  'url' => 'https://bibliotecaenigmas.com/genre/multimedia/',
-                  'name' => 'Multimedia',
+                  'url' => 'https://bibliotecaenigmas.com',
+                  'name' => 'Categoría o género no asignado',
                 );
               }
-
 
             } else {
               $breadcrumbs[] = array(

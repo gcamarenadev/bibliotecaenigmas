@@ -324,87 +324,136 @@ register_sidebar(
 function widgetListOfBooks(int $postsNumber = 5, bool $thumb = true, bool $date = true, bool $views = true, string $type = ''): void
 {
   global $post;
-  $originalPost = $post;
+  $arguments = null;
   $postId = $post->ID;
-
   $allGenres = get_the_terms($postId, 'genre');
 
-  # Select icon for Multimedia or Book section
-  if ($allGenres) {
-    if (in_array("1523", $allGenres)) {
-      $classCodeTie = 'tie_play';
-    } else {
-      $classCodeTie = 'tie_book';
-    }
-  }
+  if (is_array($allGenres)) {
+    if ($allGenres[0]->parent == 1523) {
 
-# Check post status
-  $checkStatus = get_post_meta($post->ID, 'be_theme_check', true);
-  if (!$checkStatus == 'yes') {
-    $classCodeTie = 'tie_check';
-  }
-  if (in_array("1804", $allGenres)) {
+      if ($type == 'popular') {
+        $arguments = array(
+          'orderby' => 'meta_value_num',
+          'post_type' => 'book',
+          'meta_key' => 'tie_views',
+          'posts_per_page' => $postsNumber,
+          'post_status' => 'publish',
+          'no_found_rows' => true,
+          'ignore_sticky_posts' => true,
+          'tax_query' => array(
+            array(
+              'taxonomy' => 'genre',
+              'field' => 'term_id',
+              'terms' => array(1523), // Parent ID
+              'include_children' => true,      // Set to false to exclude sub-categories
+              'operator' => 'IN',
+            ),
+          ),
+        );
+      }
+      if ($type == 'random') {
+        $arguments = array(
+          'orderby' => 'rand',
+          'post_type' => 'book',
+          'meta_key' => 'tie_views',
+          'posts_per_page' => $postsNumber,
+          'post_status' => 'publish',
+          'no_found_rows' => true,
+          'ignore_sticky_posts' => true,
+          'tax_query' => array(
+            array(
+              'taxonomy' => 'genre',
+              'field' => 'term_id',
+              'terms' => array(1523), // Parent ID
+              'include_children' => true,      // Set to false to exclude sub-categories
+              'operator' => 'IN',
+            ),
+          ),
+        );
+      }
+      if ($type == 'recent') {
+        $arguments = array(
+          'orderby' => 'desc',
+          'post_type' => 'book',
+          'posts_per_page' => $postsNumber,
+          'post_status' => 'publish',
+          'no_found_rows' => true,
+          'ignore_sticky_posts' => true,
+          'tax_query' => array(
+            array(
+              'taxonomy' => 'genre',
+              'field' => 'term_id',
+              'terms' => array(1523), // Parent ID
+              'include_children' => true,      // Set to false to exclude sub-categories
+              'operator' => 'IN',
+            ),
+          ),
+        );
+      }
 
-    if ($type == 'popular') {
-      $arguments = array(
-        'orderby' => 'meta_value_num',
-        'post_type' => 'book',
-        'meta_key' => 'tie_views',
-        'posts_per_page' => $postsNumber,
-        'post_status' => 'publish',
-        'no_found_rows' => true,
-        'ignore_sticky_posts' => true,
-        'tax_query' => array(
-          array(
-            'taxonomy' => 'genre',
-            'field' => 'term_id',
-            'terms' => array(1804), // Parent ID
-            'include_children' => true,      // Set to false to exclude sub-categories
-            'operator' => 'IN',
-          ),
-        ),
-      );
-    }
-    if ($type == 'random') {
-      $arguments = array(
-        'orderby' => 'rand',
-        'post_type' => 'book',
-        'meta_key' => 'tie_views',
-        'posts_per_page' => $postsNumber,
-        'post_status' => 'publish',
-        'no_found_rows' => true,
-        'ignore_sticky_posts' => true,
-        'tax_query' => array(
-          array(
-            'taxonomy' => 'genre',
-            'field' => 'term_id',
-            'terms' => array(1804), // Parent ID
-            'include_children' => true,      // Set to false to exclude sub-categories
-            'operator' => 'IN',
-          ),
-        ),
-      );
-    }
-    if ($type == 'recent') {
-      $arguments = array(
-        'orderby' => 'desc',
-        'post_type' => 'book',
-        'posts_per_page' => $postsNumber,
-        'post_status' => 'publish',
-        'no_found_rows' => true,
-        'ignore_sticky_posts' => true,
-        'tax_query' => array(
-          array(
-            'taxonomy' => 'genre',
-            'field' => 'term_id',
-            'terms' => array(1804), // Parent ID
-            'include_children' => true,      // Set to false to exclude sub-categories
-            'operator' => 'IN',
-          ),
-        ),
-      );
-    }
+    } elseif ($allGenres[0]->parent == 1804) {
 
+      if ($type == 'popular') {
+        $arguments = array(
+          'orderby' => 'meta_value_num',
+          'post_type' => 'book',
+          'meta_key' => 'tie_views',
+          'posts_per_page' => $postsNumber,
+          'post_status' => 'publish',
+          'no_found_rows' => true,
+          'ignore_sticky_posts' => true,
+          'tax_query' => array(
+            array(
+              'taxonomy' => 'genre',
+              'field' => 'term_id',
+              'terms' => array(1804), // Parent ID
+              'include_children' => true,      // Set to false to exclude sub-categories
+              'operator' => 'IN',
+            ),
+          ),
+        );
+      }
+      if ($type == 'random') {
+        $arguments = array(
+          'orderby' => 'rand',
+          'post_type' => 'book',
+          'meta_key' => 'tie_views',
+          'posts_per_page' => $postsNumber,
+          'post_status' => 'publish',
+          'no_found_rows' => true,
+          'ignore_sticky_posts' => true,
+          'tax_query' => array(
+            array(
+              'taxonomy' => 'genre',
+              'field' => 'term_id',
+              'terms' => array(1804), // Parent ID
+              'include_children' => true,      // Set to false to exclude sub-categories
+              'operator' => 'IN',
+            ),
+          ),
+        );
+      }
+      if ($type == 'recent') {
+        $arguments = array(
+          'orderby' => 'desc',
+          'post_type' => 'book',
+          'posts_per_page' => $postsNumber,
+          'post_status' => 'publish',
+          'no_found_rows' => true,
+          'ignore_sticky_posts' => true,
+          'tax_query' => array(
+            array(
+              'taxonomy' => 'genre',
+              'field' => 'term_id',
+              'terms' => array(1804), // Parent ID
+              'include_children' => true,      // Set to false to exclude sub-categories
+              'operator' => 'IN',
+            ),
+          ),
+        );
+      }
+
+    }
   } else {
 
     if ($type == 'popular') {
@@ -416,15 +465,6 @@ function widgetListOfBooks(int $postsNumber = 5, bool $thumb = true, bool $date 
         'post_status' => 'publish',
         'no_found_rows' => true,
         'ignore_sticky_posts' => true,
-        'tax_query' => array(
-          array(
-            'taxonomy' => 'genre',
-            'field' => 'term_id',
-            'terms' => array(1523), // Parent ID
-            'include_children' => true,      // Set to false to exclude sub-categories
-            'operator' => 'IN',
-          ),
-        ),
       );
     }
     if ($type == 'random') {
@@ -436,15 +476,6 @@ function widgetListOfBooks(int $postsNumber = 5, bool $thumb = true, bool $date 
         'post_status' => 'publish',
         'no_found_rows' => true,
         'ignore_sticky_posts' => true,
-        'tax_query' => array(
-          array(
-            'taxonomy' => 'genre',
-            'field' => 'term_id',
-            'terms' => array(1523), // Parent ID
-            'include_children' => true,      // Set to false to exclude sub-categories
-            'operator' => 'IN',
-          ),
-        ),
       );
     }
     if ($type == 'recent') {
@@ -455,19 +486,10 @@ function widgetListOfBooks(int $postsNumber = 5, bool $thumb = true, bool $date 
         'post_status' => 'publish',
         'no_found_rows' => true,
         'ignore_sticky_posts' => true,
-        'tax_query' => array(
-          array(
-            'taxonomy' => 'genre',
-            'field' => 'term_id',
-            'terms' => array(1523), // Parent ID
-            'include_children' => true,      // Set to false to exclude sub-categories
-            'operator' => 'IN',
-          ),
-        ),
       );
     }
-  }
 
+  }
 
   $selectedPosts = new WP_Query($arguments);
   $count = 0;
@@ -479,6 +501,27 @@ function widgetListOfBooks(int $postsNumber = 5, bool $thumb = true, bool $date 
       $titleAndSubtitle = get_the_title();
       $title = getTitle($titleAndSubtitle);
       $subtitle = getSubtitle($titleAndSubtitle);
+      $postId = $post->ID;
+      $allGenres = get_the_terms($postId, 'genre');
+
+      if (is_array($allGenres)) {
+        if ($allGenres[0]->parent == 1523) {
+
+          $classCodeTie = 'tie_play';
+
+        } elseif ($allGenres[0]->parent == 1804) {
+
+          $classCodeTie = 'tie_book';
+
+          # Check post status
+          $checkStatus = get_post_meta($post->ID, 'be_theme_check', true);
+          if (!$checkStatus == 'yes') {
+            $classCodeTie = 'tie_check';
+          }
+
+        }
+      }
+
       ?>
 
       <!--/Thumbnail-->
@@ -541,7 +584,6 @@ function widgetListOfBooks(int $postsNumber = 5, bool $thumb = true, bool $date 
     endwhile;
   endif;
 
-  $post = $originalPost;
   wp_reset_query();
 }
 
