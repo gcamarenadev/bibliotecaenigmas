@@ -89,5 +89,4 @@ Template Name: Timeline
 		<?php comments_template( '', true ); ?>
 	</div><!-- .content -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
