@@ -7,7 +7,7 @@
       <p>La temática se centra principalmente en enigmas, pero los títulos son variados, teniendo portadas llamativas al
         estilo de encabezados de periódico.</p>
 
-      <p> Entre esta colección tenemos:</p>
+      <p> En esta colección tenemos:</p>
       <ul>
         <li>Grandes errores</li>
         <li>Misterios de los grandes encuentros</li>
