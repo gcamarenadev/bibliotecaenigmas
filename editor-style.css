@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Lekton:ital,wght@0,400;0,700;1,400&display=swap');
+
 /*
 Theme Name: Jannah Theme
 Description: Used to style the TinyMCE editor.
+Updated: 12-05-2026
 */
 
 
@@ -27,23 +30,11 @@ Description: Used to style the TinyMCE editor.
  */
 
  html .mceContentBody { /* @beChanged */
-  margin: 20px;
-  max-width: 800px;
-  font-size: 0.99rem;
-  color: #000000;
-  text-shadow: 0 0 0 #000000;
-  text-align: justify;
-  font-family: Lekton, serif !important;
+     margin: 20px;
+     max-width: 655px;
+     font-family: "Lekton", monospace;
+     font-size: 16px;
 }
-
-body {
-	color: #2b2b2b;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", "Open Sans", Arial, sans-serif;
-	font-weight: 400;
-	line-height: 1.5;
-	vertical-align: baseline;
-}
-
 
 /**
  * 2.0 Headings
@@ -61,33 +52,57 @@ h6 {
 }
 
 h1 {
-	font-size: 1.40em;
-	line-height: 1.3846153846;
+    font-size: 20px;
+    letter-spacing: 0;
+    font-weight: bold;
+    text-shadow: 0 0 0 #000000;
+    margin-top: 20px;
+    margin-bottom: -13px;
 }
 
 h2 {
-	font-size: 1.35em;
-	line-height: 1;
+    font-size: 18px;
+    letter-spacing: 0;
+    font-weight: bold;
+    text-shadow: 0 0 0 #000000;
+    margin-top: 20px;
+    margin-bottom: -13px;
 }
 
 h3 {
-	font-size: 1.30em;
-	line-height: 1.0909090909;
+    font-size: 16px;
+    letter-spacing: 0;
+    font-weight: bold;
+    text-shadow: 0 0 0 #000000;
+    margin-top: 20px;
+    margin-bottom: -13px;
 }
 
 h4 {
-	font-size: 1.25em;
-	line-height: 1.2;
+    font-size: 14px;
+    letter-spacing: 0;
+    font-weight: bold;
+    text-shadow: 0 0 0 #000000;
+    margin-top: 20px;
+    margin-bottom: -13px;
 }
 
 h5 {
-	font-size: 1.20em;
-	line-height: 1.3333333333;
+    font-size: 12px;
+    letter-spacing: 0;
+    font-weight: bold;
+    text-shadow: 0 0 0 #000000;
+    margin-top: 20px;
+    margin-bottom: -13px;
 }
 
 h6 {
-	font-size: 1.15em;
-	line-height: 1.5;
+    font-size: 9px;
+    letter-spacing: 0;
+    font-weight: bold;
+    text-shadow: 0 0 0 #000000;
+    margin-top: 20px;
+    margin-bottom: -13px;
 }
 
 h1:first-child,
@@ -140,7 +155,11 @@ ins {
 }
 
 p {
-	margin: 0 0 24px;
+    color: #000000;
+    text-shadow: 0 0 0 #000000;
+    text-align: justify;
+    line-height: 1.5em;
+    letter-spacing: -0.01em;
 }
 
 code,
@@ -162,7 +181,6 @@ pre{
   border: 1px solid #333;
   border-left: 10px solid #333333;
   font: lighter 13px/20px Monaco, "MonacoRegular", monospace;
-  background: url(../images/code-bg.png) repeat top;
   background-size: 1px 40px;
   text-align: left;
   direction: ltr;
@@ -215,9 +233,9 @@ dd {
 
 ul,
 ol {
-	list-style: none;
-	margin: 0 0 24px 20px;
-	padding-left: 0;
+    font-size: 16px;
+    color: #000000;
+    text-shadow: 0 0 0 #000000;
 }
 
 ul {
@@ -238,10 +256,12 @@ del {
 }
 
 hr {
-	background-color: rgba(0, 0, 0, 0.1);
-	border: 0;
-	height: 1px;
-	margin-bottom: 23px;
+    border-bottom: 2px dotted #000000 !important;
+    overflow: hidden !important;
+    clear: both !important;
+    margin-bottom: 10px !important;
+    margin-top: 10px !important;
+    border-top: white;
 }
 
 
@@ -304,6 +324,16 @@ blockquote.alignright p {
 	margin-bottom: 17px;
 }
 
+blockquote p {
+    color: #000000;
+    font-size: 16px;
+    border-color: #6f5b47;
+    border-style: solid;
+    padding: 0 18px;
+    line-height: 28px;
+    font-style: italic;
+    border-width: 0 0 0 4px;
+}
 
 /**
  * 6.0 Tables
@@ -357,6 +387,7 @@ blockquote.alignright p {
 
 .mce-item-table tbody td {
   border-bottom: 1px solid #eee;
+    font-size: 16px;
 }
 
 .mce-item-table tbody tr:last-child td,
@@ -607,4 +638,3 @@ html .mceContentBody.rtl {
 .rtl td {
 	text-align: right;
 }
-
