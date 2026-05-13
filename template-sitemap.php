@@ -83,5 +83,6 @@
     <div class="clear"></div>
   </div><!-- .content -->
 
+
 <?php get_sidebar ('genres'); ?>
 <?php get_footer (); ?>
