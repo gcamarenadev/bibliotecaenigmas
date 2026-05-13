@@ -27,9 +27,6 @@
     <!-- Welcome /-->
     <?php get_template_part('library/framework/blocks/home/welcome'); ?>
 
-    <!-- Work center /-->
-    <?php get_template_part('library/framework/blocks/home/work-center-gallery'); ?>
-
     <!-- Last on library /-->
     <?php get_template_part('library/framework/blocks/home/last-post-book'); ?>
 
