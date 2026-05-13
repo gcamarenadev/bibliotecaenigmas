@@ -8,7 +8,7 @@
    * Path:               /library/framework/blocks/blog/maps/
    * File name:          writer-blog-maps.php
    * Description:        This file displays the writer blog maps.
-   * Date:               16-03-2026
+   * Date:               12-11-2025
    */
 ?>
 
