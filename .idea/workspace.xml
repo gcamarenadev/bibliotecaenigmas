@@ -4,23 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e325da0f-d3db-46b3-9617-c878c1378cfa" name="Changes" comment="- Update">
-      <change afterPath="$PROJECT_DIR$/library/framework/blocks/common/blockquote-day.php" afterDir="false" />
+    <list default="true" id="e325da0f-d3db-46b3-9617-c878c1378cfa" name="Changes" comment="- Remove sidebar on template.">
+      <change afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/category.php" beforeDir="false" afterPath="$PROJECT_DIR$/category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/framework/blocks/blog/grid/blockquote-day.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/framework/blocks/blog/grid/blockquote-day.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/framework/blocks/book/grid/blockquote-day.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/framework/blocks/book/grid/blockquote-day.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/framework/blocks/book/grid/welcome.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/framework/blocks/book/grid/welcome.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/framework/blocks/taxonomy/.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/framework/blocks/taxonomy/biography.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/framework/blocks/taxonomy/biography.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/framework/blocks/taxonomy/blockquote-day.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/framework/blocks/taxonomy/blockquote-day.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/framework/blocks/taxonomy/description.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/framework/blocks/taxonomy/description.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/framework/blocks/taxonomy/last-books.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/framework/blocks/taxonomy/last-books.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/framework/blocks/taxonomy/list-books.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/framework/blocks/taxonomy/list-books.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/taxonomy-editorial.php" beforeDir="false" afterPath="$PROJECT_DIR$/taxonomy-editorial.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/taxonomy-genre.php" beforeDir="false" afterPath="$PROJECT_DIR$/taxonomy-genre.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/taxonomy-writer.php" beforeDir="false" afterPath="$PROJECT_DIR$/taxonomy-writer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template-be-books-grid.php" beforeDir="false" afterPath="$PROJECT_DIR$/template-be-books-grid.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/css/personalized.css" beforeDir="false" afterPath="$PROJECT_DIR$/library/css/personalized.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/framework/blocks/blog/maps/writer-blog-map.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/framework/blocks/blog/maps/writer-blog-map.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/framework/blocks/book/search/taxonomy-search.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/framework/blocks/book/search/taxonomy-search.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template-be-home.php" beforeDir="false" afterPath="$PROJECT_DIR$/template-be-home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template-sitemap.php" beforeDir="false" afterPath="$PROJECT_DIR$/template-sitemap.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,18 +38,34 @@
     &quot;assignee&quot;: &quot;gcamarenaprog&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/gcamarenaprog/bibliotecaenigmas.git&quot;,
-    &quot;accountId&quot;: &quot;3e4a87f8-e8e5-4cc7-81c0-b4bce8471a36&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/gcamarenadev/bibliotecaenigmas.git",
+    "accountId": "6db40087-2527-428d-b848-261d87c8ea2d"
   }
-}</component>
+}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="McpProjectServerCommands">
-    <commands />
-    <urls />
+    <McpServerCommand sourceId="UserConfigurationSource">
+      <option name="allowedToolsNames" />
+      <option name="enabled" value="true" />
+      <option name="name" value="" />
+      <option name="programPath" value="" />
+      <option name="arguments" value="" />
+      <option name="workingDirectory" value="" />
+      <envs />
+    </McpServerCommand>
+    <McpServerCommand sourceId="UserConfigurationSource">
+      <option name="allowedToolsNames" />
+      <option name="enabled" value="true" />
+      <option name="name" value="" />
+      <option name="programPath" value="" />
+      <option name="arguments" value="" />
+      <option name="workingDirectory" value="" />
+      <envs />
+    </McpServerCommand>
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
@@ -75,6 +82,7 @@
   "keyToString": {
     "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "WebServerToolWindowFactoryState": "false",
@@ -88,7 +96,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.sync",
+    "settings.editor.selected.configurable": "editing.templates",
     "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
   }
@@ -96,8 +104,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-PS-253.30387.85" />
-        <option value="bundled-php-predefined-a98d8de5180a-0e0d91225499-com.jetbrains.php.sharedIndexes-PS-253.30387.85" />
+        <option value="bundled-js-predefined-d6986cc7102b-a71380e98a7c-JavaScript-PS-252.28238.9" />
+        <option value="bundled-php-predefined-a98d8de5180a-58f58c5035b3-com.jetbrains.php.sharedIndexes-PS-252.28238.9" />
       </set>
     </attachedChunks>
   </component>
@@ -144,30 +152,7 @@
       <workItem from="1770123609692" duration="38028000" />
       <workItem from="1773452487837" duration="18042000" />
       <workItem from="1773636092817" duration="7893000" />
-    </task>
-    <task id="LOCAL-00013" summary="- Refactor the last-post-book.php file in the home directory.&#10;- The error where the superimposed icon did not appear on the image was corrected.">
-      <option name="closed" value="true" />
-      <created>1770113036967</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1770113036967</updated>
-    </task>
-    <task id="LOCAL-00014" summary="- Refactor the last-post-multimedia.php file in the home directory.">
-      <option name="closed" value="true" />
-      <created>1770113329937</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1770113329937</updated>
-    </task>
-    <task id="LOCAL-00015" summary="- Refactoring all files in the home directory.">
-      <option name="closed" value="true" />
-      <created>1770115041023</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1770115041023</updated>
+      <workItem from="1778640993926" duration="1808000" />
     </task>
     <task id="LOCAL-00016" summary="- Refactoring the blockquote-day.php">
       <option name="closed" value="true" />
@@ -537,7 +522,31 @@
       <option name="project" value="LOCAL" />
       <updated>1773647009224</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="- New images for Escóbula de la Brújula">
+      <option name="closed" value="true" />
+      <created>1778642997968</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1778642997968</updated>
+    </task>
+    <task id="LOCAL-00063" summary="- Fixed mistakes on editor-style.css file">
+      <option name="closed" value="true" />
+      <created>1778643407430</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1778643407430</updated>
+    </task>
+    <task id="LOCAL-00064" summary="- Remove sidebar on template.">
+      <option name="closed" value="true" />
+      <created>1778643451158</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1778643451158</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -555,9 +564,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="- Add new image covers." />
-    <MESSAGE value="- Add new descriptions" />
-    <MESSAGE value="- Add icons for personalized tools on Tiny MCE" />
     <MESSAGE value="- Fixed minor bugs on paths" />
     <MESSAGE value="- Fixed minor bugs on add-book.php" />
     <MESSAGE value="- Fixed minor bugs on widgets files" />
@@ -580,9 +586,16 @@
     <MESSAGE value="- Add getWriterNameWithWriterId function." />
     <MESSAGE value="- change border-radius: to 0px" />
     <MESSAGE value="- Update" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Update" />
+    <MESSAGE value="- New images for Escóbula de la Brújula" />
+    <MESSAGE value="- Fixed mistakes on editor-style.css file" />
+    <MESSAGE value="- Remove sidebar on template." />
+    <option name="LAST_COMMIT_MESSAGE" value="- Remove sidebar on template." />
   </component>
   <component name="WordPressConfiguration">
     <wordpressPath />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

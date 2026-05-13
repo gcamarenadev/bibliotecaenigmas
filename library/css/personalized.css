@@ -225,10 +225,16 @@ h4 {
 
 /* --> 1774 | @be_checked */
 #crumbs {
-  font-size: 1.10em;
+  font-size: 1.20em;
   color: #2d2d2d;
   text-shadow: 0 0 0 #000000 !important;
-  background: #ffffff;
+  width: 100%;
+  background: #fdfdfc;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  padding-left: 10px;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 60%);
+  border-radius: 0;
 }
 
 /* --> XXXX | @be_checked */
@@ -238,13 +244,6 @@ h4 {
   font-size: 1.10em !important;
   text-decoration: none;
   font-weight: bold;
-}
-
-/* --> XXXX | @be_checked */
-.current {
-  color: #000000;
-  text-shadow: 0px 0px 1px #000000 !important;
-  font-size: 1.10em !important;
 }
 
 /* --> 1826 | @be_checked */
