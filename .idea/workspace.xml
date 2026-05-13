@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e325da0f-d3db-46b3-9617-c878c1378cfa" name="Changes" comment="- Remove sidebar on template.">
+    <list default="true" id="e325da0f-d3db-46b3-9617-c878c1378cfa" name="Changes" comment="- Minor bugs fixed.">
       <change afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/css/personalized.css" beforeDir="false" afterPath="$PROJECT_DIR$/library/css/personalized.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/framework/blocks/blog/maps/writer-blog-map.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/framework/blocks/blog/maps/writer-blog-map.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/framework/blocks/book/search/taxonomy-search.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/framework/blocks/book/search/taxonomy-search.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template-be-home.php" beforeDir="false" afterPath="$PROJECT_DIR$/template-be-home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template-sitemap.php" beforeDir="false" afterPath="$PROJECT_DIR$/template-sitemap.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,55 +146,7 @@
       <workItem from="1770123609692" duration="38028000" />
       <workItem from="1773452487837" duration="18042000" />
       <workItem from="1773636092817" duration="7893000" />
-      <workItem from="1778640993926" duration="1808000" />
-    </task>
-    <task id="LOCAL-00016" summary="- Refactoring the blockquote-day.php">
-      <option name="closed" value="true" />
-      <created>1770115185889</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1770115185889</updated>
-    </task>
-    <task id="LOCAL-00017" summary="- Bug fix for image linking to the post on the check-also.php">
-      <option name="closed" value="true" />
-      <created>1770116242346</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1770116242346</updated>
-    </task>
-    <task id="LOCAL-00018" summary="- Bug fix for next and previous link on the navigation.php for sigle book page.">
-      <option name="closed" value="true" />
-      <created>1770116629491</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1770116629491</updated>
-    </task>
-    <task id="LOCAL-00019" summary="- Bug fix for icon image on last-posts.php in blog/grid directory">
-      <option name="closed" value="true" />
-      <created>1770118379790</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1770118379790</updated>
-    </task>
-    <task id="LOCAL-00020" summary="- Bug fix for icon image on thumbnail.php.php in section blog.">
-      <option name="closed" value="true" />
-      <created>1770119047648</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1770119047648</updated>
-    </task>
-    <task id="LOCAL-00021" summary="- Bug fix for icon image and title on last-books.php for taxonomy.">
-      <option name="closed" value="true" />
-      <created>1770123156311</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1770123156311</updated>
+      <workItem from="1778640993926" duration="2182000" />
     </task>
     <task id="LOCAL-00022" summary="- Refactor last-books.php file.">
       <option name="closed" value="true" />
@@ -546,7 +492,55 @@
       <option name="project" value="LOCAL" />
       <updated>1778643451158</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="- Change crumbs styles.">
+      <option name="closed" value="true" />
+      <created>1778643824653</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1778643824653</updated>
+    </task>
+    <task id="LOCAL-00066" summary="- New covers images.">
+      <option name="closed" value="true" />
+      <created>1778643870837</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1778643870837</updated>
+    </task>
+    <task id="LOCAL-00067" summary="- Minor bugs fixed.">
+      <option name="closed" value="true" />
+      <created>1778643910718</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1778643910718</updated>
+    </task>
+    <task id="LOCAL-00068" summary="- Minor bugs fixed.">
+      <option name="closed" value="true" />
+      <created>1778643932749</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1778643932749</updated>
+    </task>
+    <task id="LOCAL-00069" summary="- Remove Work Center section on home page.">
+      <option name="closed" value="true" />
+      <created>1778643955586</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1778643955586</updated>
+    </task>
+    <task id="LOCAL-00070" summary="- Minor bugs fixed.">
+      <option name="closed" value="true" />
+      <created>1778644029417</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1778644029417</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -564,10 +558,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="- Fixed minor bugs on paths" />
-    <MESSAGE value="- Fixed minor bugs on add-book.php" />
-    <MESSAGE value="- Fixed minor bugs on widgets files" />
-    <MESSAGE value="- Fixed minor bugs on templates files" />
     <MESSAGE value="- New files" />
     <MESSAGE value="- New image files" />
     <MESSAGE value="- Fixed minor bugs on css files." />
@@ -589,7 +579,11 @@
     <MESSAGE value="- New images for Escóbula de la Brújula" />
     <MESSAGE value="- Fixed mistakes on editor-style.css file" />
     <MESSAGE value="- Remove sidebar on template." />
-    <option name="LAST_COMMIT_MESSAGE" value="- Remove sidebar on template." />
+    <MESSAGE value="- Change crumbs styles." />
+    <MESSAGE value="- New covers images." />
+    <MESSAGE value="- Remove Work Center section on home page." />
+    <MESSAGE value="- Minor bugs fixed." />
+    <option name="LAST_COMMIT_MESSAGE" value="- Minor bugs fixed." />
   </component>
   <component name="WordPressConfiguration">
     <wordpressPath />
