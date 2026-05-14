@@ -303,8 +303,6 @@ function show_custom_meta_box(): void
     $digitalFormatValue = get_post_meta($post->ID, $digitalFormatMeta['id']);
     $digitalFormatString = serialize($digitalFormatValue);
 
-    print_r($digitalFormatString);
-
     $digitalFormatPlanText = (str_contains($digitalFormatString, 'Texto plano')) ? 'checked' : ' ';
     $digitalFormatOCRScan = (str_contains($digitalFormatString, 'Escaneo (OCR)')) ? 'checked' : ' ';
     $digitalFormatImagesScan = (str_contains($digitalFormatString, 'Escaneo (imágenes)')) ? 'checked' : ' ';
