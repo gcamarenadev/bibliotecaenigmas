@@ -303,10 +303,12 @@ function show_custom_meta_box(): void
     $digitalFormatValue = get_post_meta($post->ID, $digitalFormatMeta['id']);
     $digitalFormatString = serialize($digitalFormatValue);
 
+    print_r($digitalFormatString);
+
     $digitalFormatPlanText = (str_contains($digitalFormatString, 'Texto plano')) ? 'checked' : ' ';
     $digitalFormatOCRScan = (str_contains($digitalFormatString, 'Escaneo (OCR)')) ? 'checked' : ' ';
     $digitalFormatImagesScan = (str_contains($digitalFormatString, 'Escaneo (imágenes)')) ? 'checked' : ' ';
-    $digitalFormatPhotosScan = (str_contains($digitalFormatString, 'Escaneo (fotografía)')) ? 'checked' : ' ';
+    $digitalFormatPhotosScan = (str_contains($digitalFormatString, 'Escaneo (fotografías)')) ? 'checked' : ' ';
     $digitalFormatPhotocopiesScan = (str_contains($digitalFormatString, 'Escaneo (fotocopias)')) ? 'checked' : ' ';
     $digitalFormatPhotos = (str_contains($digitalFormatString, 'Fotografiado')) ? 'checked' : ' ';
     $digitalFormatAudio = (str_contains($digitalFormatString, 'Audio')) ? 'checked' : ' ';
@@ -866,10 +868,10 @@ function show_custom_meta_box(): void
                             <!-- Escaneo (fotografías) /-->
                             <div class=" col_-12 col_-lg-3 col_-md-6 bea-mb15">
                                 <input type="checkbox"
-                                       id="chkEscaneoImagenes"
+                                       id="chkEscaneoFotografias"
                                        name="<?php echo $digitalFormatMeta['name']; ?>[]"
-                                       value="Imágenes" <?php echo $digitalFormatPhotosScan; ?>>
-                                <label for="chkEscaneoImagenes"
+                                       value="Escaneo (fotografías)" <?php echo $digitalFormatPhotosScan; ?>>
+                                <label for="chkEscaneoFotografias"
                                        class="bea-mr15">Escaneo (fotografías)</label>
                             </div>
 
@@ -878,7 +880,7 @@ function show_custom_meta_box(): void
                                 <input type="checkbox"
                                        id="chkEscaneoFotocopias"
                                        name="<?php echo $digitalFormatMeta['name']; ?>[]"
-                                       value="Fotografiado" <?php echo $digitalFormatPhotocopiesScan; ?>>
+                                       value="Escaneo (fotocopias)" <?php echo $digitalFormatPhotocopiesScan; ?>>
                                 <label for="chkEscaneoFotocopias"
                                        class="bea-mr15">Escaneo (fotocopias)</label>
                             </div>
@@ -888,7 +890,7 @@ function show_custom_meta_box(): void
                                 <input type="checkbox"
                                        id="chkFotografiado"
                                        name="<?php echo $digitalFormatMeta['name']; ?>[]"
-                                       value="Interactivo" <?php echo $digitalFormatPhotos; ?>>
+                                       value="Fotografiado" <?php echo $digitalFormatPhotos; ?>>
                                 <label for="chkFotografiado"
                                        class="bea-mr15">Fotografiado</label>
                             </div>
