@@ -4,8 +4,259 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e325da0f-d3db-46b3-9617-c878c1378cfa" name="Changes" comment="- Minor bugs fixed.">
-      <change afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
+    <list default="true" id="e325da0f-d3db-46b3-9617-c878c1378cfa" name="Changes" comment="- Fixed icon over images">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/admin/add-book.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/admin/add-book.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/framework/blocks/book/descriptions/readers-digest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/100.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/100.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/101.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/101.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/102.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/102.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/103.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/103.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/104.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/104.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/105.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/105.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/106.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/106.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/107.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/107.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/108.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/108.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/109.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/109.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/110.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/110.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/111.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/111.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/112.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/112.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/113.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/113.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/114.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/114.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/115.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/115.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/116.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/116.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/117.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/117.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/118.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/118.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/119.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/119.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/120.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/120.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/121.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/122.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/122.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/123.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/123.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/124.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/124.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/125.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/125.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/126.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/126.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/127.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/127.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/128.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/128.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/129.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/129.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/130.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/130.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/131.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/131.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/132.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/132.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/133.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/133.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/134.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/134.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/135.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/135.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/136.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/136.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/137.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/137.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/138.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/138.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/139.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/139.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/140.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/140.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/141.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/141.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/142.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/142.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/143.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/143.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/144.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/144.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/145.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/145.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/146.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/146.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/147.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/147.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/148.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/148.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/149.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/149.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/150.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/150.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/151.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/151.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/152.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/152.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/153.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/153.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/154.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/154.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/155.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/155.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/156.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/156.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/157.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/157.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/158.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/158.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/159.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/159.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/160.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/160.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/161.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/161.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/162.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/162.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/163.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/163.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/164.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/164.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/165.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/165.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/166.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/166.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/167.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/167.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/168.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/168.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/169.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/169.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/170.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/170.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/171.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/171.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/172.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/172.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/173.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/173.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/174.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/174.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/175.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/175.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/176.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/176.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/177.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/177.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/178.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/178.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/179.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/179.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/180.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/180.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/181.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/181.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/182.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/182.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/183.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/183.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/184.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/184.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/185.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/185.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/186.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/186.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/187.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/187.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/188.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/188.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/189.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/189.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/190.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/190.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/191.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/191.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/192.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/192.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/193.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/193.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/194.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/194.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/195.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/195.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/196.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/196.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/197.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/197.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/198.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/198.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/199.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/199.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/200.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/200.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/201.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/201.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/202.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/202.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/203.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/203.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/204.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/204.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/205.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/205.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/206.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/206.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/207.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/207.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/208.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/208.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/209.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/209.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/210.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/210.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/211.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/211.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/212.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/212.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/213.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/213.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/214.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/214.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/215.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/215.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/216.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/216.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/217.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/217.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/218.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/218.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/219.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/219.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/220.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/220.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/221.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/221.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/222.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/222.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/223.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/223.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/224.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/224.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/225.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/225.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/226.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/226.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/227.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/227.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/228.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/228.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/229.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/229.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/230.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/230.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/231.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/231.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/232.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/232.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/233.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/233.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/234.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/234.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/235.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/235.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/236.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/236.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/237.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/237.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/238.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/238.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/239.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/239.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/24.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/24.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/240.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/241.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/242.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/243.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/244.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/245.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/246.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/247.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/248.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/249.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/25.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/25.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/250.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/251.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/252.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/253.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/254.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/255.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/256.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/257.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/258.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/259.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/26.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/26.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/260.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/261.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/262.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/263.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/264.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/265.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/266.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/267.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/268.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/269.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/27.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/27.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/270.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/28.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/28.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/29.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/29.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/30.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/30.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/31.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/31.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/32.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/32.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/33.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/33.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/34.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/34.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/35.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/35.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/36.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/36.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/37.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/37.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/38.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/38.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/39.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/39.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/40.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/40.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/41.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/41.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/42.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/42.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/43.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/43.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/44.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/44.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/45.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/45.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/46.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/46.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/47.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/47.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/48.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/48.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/49.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/49.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/50.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/50.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/51.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/51.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/52.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/52.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/53.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/53.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/54.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/54.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/55.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/55.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/56.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/56.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/57.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/57.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/58.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/58.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/59.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/59.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/60.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/60.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/61.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/61.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/62.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/62.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/63.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/63.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/64.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/64.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/65.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/65.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/66.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/66.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/67.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/67.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/68.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/68.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/69.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/69.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/70.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/70.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/71.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/71.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/72.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/72.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/73.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/73.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/74.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/74.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/75.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/75.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/76.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/76.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/77.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/77.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/78.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/78.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/79.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/79.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/80.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/80.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/81.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/81.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/82.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/82.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/83.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/83.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/84.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/84.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/85.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/85.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/86.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/86.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/87.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/87.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/88.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/88.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/89.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/89.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/90.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/90.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/91.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/91.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/92.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/92.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/93.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/93.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/94.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/94.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/95.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/95.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/96.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/96.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/97.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/97.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/98.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/98.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/images/randomize-system/99.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/library/images/randomize-system/99.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/js/be-tools.js" beforeDir="false" afterPath="$PROJECT_DIR$/library/js/be-tools.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/single-book.php" beforeDir="false" afterPath="$PROJECT_DIR$/single-book.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,12 +283,12 @@
     &quot;assignee&quot;: &quot;gcamarenaprog&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/gcamarenadev/bibliotecaenigmas.git",
-    "accountId": "6db40087-2527-428d-b848-261d87c8ea2d"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/gcamarenadev/bibliotecaenigmas.git&quot;,
+    &quot;accountId&quot;: &quot;6db40087-2527-428d-b848-261d87c8ea2d&quot;
   }
-}]]></component>
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -72,29 +323,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "D:/xaamp/htdocs/bibliotecaenigmas",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editing.templates",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/xaamp/htdocs/bibliotecaenigmas&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editing.templates&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -146,47 +397,10 @@
       <workItem from="1770123609692" duration="38028000" />
       <workItem from="1773452487837" duration="18042000" />
       <workItem from="1773636092817" duration="7893000" />
-      <workItem from="1778640993926" duration="2182000" />
-    </task>
-    <task id="LOCAL-00022" summary="- Refactor last-books.php file.">
-      <option name="closed" value="true" />
-      <created>1770128326352</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1770128326352</updated>
-    </task>
-    <task id="LOCAL-00023" summary="- Refactor thumbnail.php for book section.">
-      <option name="closed" value="true" />
-      <created>1770128420476</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1770128420476</updated>
-    </task>
-    <task id="LOCAL-00024" summary="- Refactor thumbnail.php for book section.">
-      <option name="closed" value="true" />
-      <created>1770128706760</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1770128706761</updated>
-    </task>
-    <task id="LOCAL-00025" summary="- Lekton fonts were added.">
-      <option name="closed" value="true" />
-      <created>1770128800953</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1770128800953</updated>
-    </task>
-    <task id="LOCAL-00026" summary="- The last-books.php file in the taxonomy directory was refactored">
-      <option name="closed" value="true" />
-      <created>1770348482640</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1770348482640</updated>
+      <workItem from="1778640993926" duration="2254000" />
+      <workItem from="1778645113760" duration="5234000" />
+      <workItem from="1785188147204" duration="7904000" />
+      <workItem from="1785986956239" duration="1270000" />
     </task>
     <task id="LOCAL-00027" summary="- Minor bugs fixed.">
       <option name="closed" value="true" />
@@ -540,7 +754,47 @@
       <option name="project" value="LOCAL" />
       <updated>1778644029417</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="- New config files!">
+      <option name="closed" value="true" />
+      <created>1778644072557</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1778644072557</updated>
+    </task>
+    <task id="LOCAL-00072" summary="- Fixed list css styles">
+      <option name="closed" value="true" />
+      <created>1778645254094</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1778645254094</updated>
+    </task>
+    <task id="LOCAL-00073" summary="- Fixed bugs on select media type from admin book manager data">
+      <option name="closed" value="true" />
+      <created>1778721628053</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1778721628053</updated>
+    </task>
+    <task id="LOCAL-00074" summary="- Deleted printing test">
+      <option name="closed" value="true" />
+      <created>1778722077833</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1778722077833</updated>
+    </task>
+    <task id="LOCAL-00075" summary="- Fixed icon over images">
+      <option name="closed" value="true" />
+      <created>1778722480985</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1778722480985</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -558,11 +812,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="- New files" />
-    <MESSAGE value="- New image files" />
-    <MESSAGE value="- Fixed minor bugs on css files." />
-    <MESSAGE value="- Changes marked on the file." />
-    <MESSAGE value="- Minor changes on loop files." />
     <MESSAGE value="- Minor changes on index files." />
     <MESSAGE value="- Minor changes on files." />
     <MESSAGE value="- Minor changes on file." />
@@ -583,7 +832,12 @@
     <MESSAGE value="- New covers images." />
     <MESSAGE value="- Remove Work Center section on home page." />
     <MESSAGE value="- Minor bugs fixed." />
-    <option name="LAST_COMMIT_MESSAGE" value="- Minor bugs fixed." />
+    <MESSAGE value="- New config files!" />
+    <MESSAGE value="- Fixed list css styles" />
+    <MESSAGE value="- Fixed bugs on select media type from admin book manager data" />
+    <MESSAGE value="- Deleted printing test" />
+    <MESSAGE value="- Fixed icon over images" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Fixed icon over images" />
   </component>
   <component name="WordPressConfiguration">
     <wordpressPath />
