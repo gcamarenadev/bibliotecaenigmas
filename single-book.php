@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name:      Biblioteca Enigmas
+ * Template Name:      Biblioteca Enigmas - Single book
  * Theme URI:          https://github.com/gcamarenaprog/bibliotecaenigmas
  * Description Theme:  Sahifa theme personalized for bibliotecaenigmas.com website!
  * Author:             Guillermo Camarena
@@ -23,16 +23,15 @@ $postId = get_the_ID();
 
 $sidebarHidden = get_post_meta($post->ID, 'be_theme_sidebar');
 
+// Determines the page width if the sidebar is hidden or not.
 if (isset($sidebarHidden[0])) {
-  $sidebarHidden = $sidebarHidden[0];
+	$sidebarHidden = 'yes';
+	$classContent = ' style:"width:100%;" ';
+}else{
+	$sidebarHidden = 'no';
+	$classContent = ' class="content" ';
 }
 
-// Determines the page width if the sidebar is hidden or not.
-if ($sidebarHidden == 'yes') {
-  $classContent = 'style:"width:100%;"';
-} else {
-  $classContent = ' class="content" ';
-}
 ?>
 
 <?php get_header(); ?>
@@ -40,152 +39,154 @@ if ($sidebarHidden == 'yes') {
 <?php tie_setPostViews(); ?>
 
 <?php if (!have_posts()) : ?>
-  <div <?php echo $classContent; ?> >
-    <?php get_template_part('framework/parts/not-found'); ?>
-  </div>
+	<div <?php echo $classContent; ?> >
+		<?php get_template_part('framework/parts/not-found'); ?>
+	</div>
 <?php endif; ?>
 
 <div <?php echo $classContent; ?> >
-  <h1><?php echo $parentCategoryId; ?></h1>
-  <!-- Meta box -->
-  <?php get_template_part('library/framework/blocks/book/single/meta'); ?>
 
-  <!-- Image and data book /-->
-  <div class="tb-box">
+	<h1><?php echo $parentCategoryId; ?></h1>
 
-    <div class="row_ justify_-content-center align_-items-center">
+	<!-- Meta box -->
+	<?php get_template_part('library/framework/blocks/book/single/meta'); ?>
 
-      <!--/Thumbnail-->
-      <div class="col_xl-5 col_-lg-5 col_-md-5 col_-sm-5 col_-12 text-center">
-        <?php get_template_part('library/framework/blocks/book/single/thumbnail'); ?>
-      </div>
+	<!-- Image and data book /-->
+	<div class="tb-box">
 
-      <!--/Data-->
-      <div class="col_xl-7 col_-lg-7 col_-md-7 col_-sm-7 col_-12 text-center">
-        <?php get_template_part('library/framework/blocks/book/single/data'); ?>
-      </div>
+		<div class="row_ justify_-content-center align_-items-center">
 
-    </div>
+			<!--/Thumbnail-->
+			<div class="col_xl-5 col_-lg-5 col_-md-5 col_-sm-5 col_-12 text-center">
+				<?php get_template_part('library/framework/blocks/book/single/thumbnail'); ?>
+			</div>
 
-  </div>
+			<!--/Data-->
+			<div class="col_xl-7 col_-lg-7 col_-md-7 col_-sm-7 col_-12 text-center">
+				<?php get_template_part('library/framework/blocks/book/single/data'); ?>
+			</div>
 
-  <!-- Content and share /-->
-  <article>
-    <div <?php post_class('post-listing'); ?> id="the-post">
-      <div class="post-inner">
+		</div>
 
-        <div class="entry">
+	</div>
 
-          <!-- Content /-->
-          <article>
+	<!-- Content and share /-->
+	<article>
+		<div <?php post_class('post-listing'); ?> id="the-post">
+			<div class="post-inner">
 
-            <!-- Sinopsis /-->
-            <h1 class="text-center">Sinopsis</h1>
+				<div class="entry">
 
-            <!-- Content /-->
-            <?php the_content(); ?>
+					<!-- Content /-->
+					<article>
 
-            <!-- Tables /-->
-            <?php if ($postId == 24799): ?>
+						<!-- Sinopsis /-->
+						<h1 class="text-center">Sinopsis</h1>
 
-              <!-- La escóbula de la brújula /-->
-              <?php get_template_part('library/framework/blocks/book/descriptions/description-escobula-de-la-brujula'); ?>
+						<!-- Content /-->
+						<?php the_content(); ?>
 
-            <?php elseif ($postId == 19762): ?>
+						<!-- Tables /-->
+						<?php if ($postId == 24799): ?>
 
-              <!-- Cuarto Milenio /-->
-              <?php get_template_part('library/framework/blocks/book/descriptions/description-cuarto-milenio'); ?>
+							<!-- La escóbula de la brújula /-->
+							<?php get_template_part('library/framework/blocks/book/descriptions/description-escobula-de-la-brujula'); ?>
 
-            <?php elseif ($postId == 19774): ?>
+						<?php elseif ($postId == 19762): ?>
 
-              <!-- TVN Chile, OVNI /-->
-              <?php get_template_part('library/framework/blocks/book/descriptions/description-tvn-chile-ovni'); ?>
+							<!-- Cuarto Milenio /-->
+							<?php get_template_part('library/framework/blocks/book/descriptions/description-cuarto-milenio'); ?>
 
-            <?php elseif ($postId == 21667): ?>
+						<?php elseif ($postId == 19774): ?>
 
-              <!-- Arthur C. Clarke - EMM /-->
-              <?php get_template_part('library/framework/blocks/book/descriptions/description-arthur-cc-emm'); ?>
+							<!-- TVN Chile, OVNI /-->
+							<?php get_template_part('library/framework/blocks/book/descriptions/description-tvn-chile-ovni'); ?>
 
-            <?php elseif ($postId == 26230): ?>
+						<?php elseif ($postId == 21667): ?>
 
-              <!-- Arthur C. Clarke - EMU /-->
-              <?php get_template_part('library/framework/blocks/book/descriptions/description-arthur-cc-emu'); ?>
+							<!-- Arthur C. Clarke - EMM /-->
+							<?php get_template_part('library/framework/blocks/book/descriptions/description-arthur-cc-emm'); ?>
 
-            <?php elseif ($postId == 26252): ?>
+						<?php elseif ($postId == 26230): ?>
 
-              <!-- Arthur C. Clarke - EMPE /-->
-              <?php get_template_part('library/framework/blocks/book/descriptions/description-arthur-cc-empe'); ?>
+							<!-- Arthur C. Clarke - EMU /-->
+							<?php get_template_part('library/framework/blocks/book/descriptions/description-arthur-cc-emu'); ?>
 
-            <?php elseif ($postId == 26387): ?>
+						<?php elseif ($postId == 26252): ?>
 
-              <!-- Netflix, El enigma extraterrestre /-->
-              <?php get_template_part('library/framework/blocks/book/descriptions/description-netflix-el-enigma-extraterrestre'); ?>
+							<!-- Arthur C. Clarke - EMPE /-->
+							<?php get_template_part('library/framework/blocks/book/descriptions/description-arthur-cc-empe'); ?>
 
-            <?php elseif ($postId == 26383): ?>
+						<?php elseif ($postId == 26387): ?>
 
-              <!-- Canal Infinito, Latinoamérica, Historia perdida /-->
-              <?php get_template_part('library/framework/blocks/book/descriptions/description-canal-infinito-lhp'); ?>
+							<!-- Netflix, El enigma extraterrestre /-->
+							<?php get_template_part('library/framework/blocks/book/descriptions/description-netflix-el-enigma-extraterrestre'); ?>
 
-            <?php elseif ($postId == 21515): ?>
+						<?php elseif ($postId == 26383): ?>
 
-              <!-- Canal Infinito, Latinoamérica, Historia perdida /-->
-              <?php get_template_part('library/framework/blocks/book/descriptions/description-canal-infinito-mu'); ?>
+							<!-- Canal Infinito, Latinoamérica, Historia perdida /-->
+							<?php get_template_part('library/framework/blocks/book/descriptions/description-canal-infinito-lhp'); ?>
 
-            <?php elseif ($postId == 24478): ?>
+						<?php elseif ($postId == 21515): ?>
 
-              <!-- Paradig+ XXI /-->
-              <?php get_template_part('library/framework/blocks/book/descriptions/description-paradig+'); ?>
+							<!-- Canal Infinito, Latinoamérica, Historia perdida /-->
+							<?php get_template_part('library/framework/blocks/book/descriptions/description-canal-infinito-mu'); ?>
 
-            <?php else: ?>
-              <!-- Nothing -->
-            <?php endif; ?>
+						<?php elseif ($postId == 24478): ?>
 
+							<!-- Paradig+ XXI /-->
+							<?php get_template_part('library/framework/blocks/book/descriptions/description-paradig+'); ?>
 
-            <!-- Pagination /-->
-            <?php wp_link_pages(array('before' => '<div class="page-link">' . __ti('Pages:'), 'after' => '</div>')); ?>
-
-            <!-- Edit link /-->
-            <?php edit_post_link(__ti('Edit'), '<span class="edit-link">', '</span>'); ?>
-
-          </article>
-
-        </div>
-
-        <!-- Share /-->
-        <?php if ((tie_get_option('share_post') && empty($get_meta["tie_hide_share"][0])) || (!empty($get_meta["tie_hide_share"][0]) && $get_meta["tie_hide_share"][0] == 'no'))
-          get_template_part('library/framework/blocks/book/single/share');
-        ?>
-
-      </div>
-      <div class="clear"></div>
-    </div>
-  </article>
-
-  <!-- Author /-->
-  <?php if ((tie_get_option('post_authorbio') && empty($get_meta["tie_hide_author"][0])) || (isset($get_meta["tie_hide_related"][0]) && $get_meta["tie_hide_author"][0] == 'no')) : ?>
-    <?php get_template_part('library/framework/blocks/book/single/author'); ?>
-  <?php endif; ?>
-
-  <!-- Navigation /-->
-  <?php if (tie_get_option('post_nav')) : ?>
-    <?php get_template_part('library/framework/blocks/book/single/navigation'); ?>
-  <?php endif; ?>
-
-  <!-- Related books box /-->
-  <?php get_template_part('library/framework/blocks/book/single/related'); ?>
-
-  <!-- Check also -->
-  <?php get_template_part('library/framework/blocks/book/single/check-also'); ?>
+						<?php else: ?>
+							<!-- Nothing -->
+						<?php endif; ?>
 
 
-  <div class="clear"></div>
+						<!-- Pagination /-->
+						<?php wp_link_pages(array('before' => '<div class="page-link">' . __ti('Pages:'), 'after' => '</div>')); ?>
+
+						<!-- Edit link /-->
+						<?php edit_post_link(__ti('Edit'), '<span class="edit-link">', '</span>'); ?>
+
+					</article>
+
+				</div>
+
+				<!-- Share /-->
+				<?php if ((tie_get_option('share_post') && empty($get_meta["tie_hide_share"][0])) || (!empty($get_meta["tie_hide_share"][0]) && $get_meta["tie_hide_share"][0] == 'no'))
+					get_template_part('library/framework/blocks/book/single/share');
+				?>
+
+			</div>
+			<div class="clear"></div>
+		</div>
+	</article>
+
+	<!-- Author /-->
+	<?php if ((tie_get_option('post_authorbio') && empty($get_meta["tie_hide_author"][0])) || (isset($get_meta["tie_hide_related"][0]) && $get_meta["tie_hide_author"][0] == 'no')) : ?>
+		<?php get_template_part('library/framework/blocks/book/single/author'); ?>
+	<?php endif; ?>
+
+	<!-- Navigation /-->
+	<?php if (tie_get_option('post_nav')) : ?>
+		<?php get_template_part('library/framework/blocks/book/single/navigation'); ?>
+	<?php endif; ?>
+
+	<!-- Related books box /-->
+	<?php get_template_part('library/framework/blocks/book/single/related'); ?>
+
+	<!-- Check also -->
+	<?php get_template_part('library/framework/blocks/book/single/check-also'); ?>
+
+
+	<div class="clear"></div>
 </div><!--/.content-->
 
 <?php if ($sidebarHidden != 'yes') {
-  get_sidebar('genres');
-} else {
+	get_sidebar('genres');
 }
 ?>
+
 <?php get_footer(); ?>
 
 
