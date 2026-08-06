@@ -211,7 +211,7 @@ $custom_meta_fields = array(
         array(
                 'icon' => 'dashicons dashicons-table-col-before',
                 'title' => 'Barra lateral',
-                'label' => 'Ocutlar barra lateral',
+                'label' => 'Ocultar barra lateral',
                 'description' => 'Oculta o muestra la barra lateral, esta activada de manera predeterminada.',
                 'id' => $prefix . 'sidebar',
                 'name' => $prefix . 'sidebar',
@@ -242,7 +242,7 @@ function show_custom_meta_box(): void
     $sidebarVerificationMeta = $custom_meta_fields[14];
     $sidebarVerificationValue = get_post_meta($post->ID, $sidebarVerificationMeta['id'], true);
     $sidebarVerificationChecked = ($sidebarVerificationValue == "yes") ? 'checked' : '';
-    $sidebarVerificationText = ($sidebarVerificationValue == "yes") ? '<span>¡Barra lateral oculta!</span>' : '<span>¡Se muestra la barra lateral!</em>';
+    $sidebarVerificationText = ($sidebarVerificationValue == "yes") ? '<span>Ocultar barra lateral</span>' : '<span>Ocultar barra lateral</em>';
 
     # Numbers of views field
     $numbersOfViewsMeta = $custom_meta_fields[2];

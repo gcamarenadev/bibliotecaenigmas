@@ -524,6 +524,83 @@
           menu:
             [
               {
+                text: 'Centrada',
+                icon: ' be-ico_imgs',
+                onclick: function () {
+                  editor.windowManager.open({
+                    title: 'Una imágen centrada',
+                    body: [
+                      {
+                        type: 'textbox',
+                        name: 'textBoxText',
+                        id: 'textBoxText',
+                        label: 'Texto',
+                        value: 'Texto',
+                        placeholder: 'Texto'
+                      },
+                      {
+                        type: 'textbox',
+                        name: 'textBoxWidth',
+                        id: 'textBoxWidth',
+                        label: 'Ancho en px',
+                        value: '300',
+                        placeholder: '300'
+                      },
+                      {
+                        type: 'textbox',
+                        name: 'textBoxURL',
+                        id: 'textBoxURL',
+                        label: 'URL de la imágen',
+                        placeholder: 'https://bibliotecaenigmas.com/wp-content/themes/sahifa/library/images/images/no-image.jpg',
+                        minWidth: 300,
+                        value: 'https://bibliotecaenigmas.com/wp-content/themes/sahifa/library/images/images/no-image.jpg'
+                      },
+                      {
+                        type: 'button',
+                        name: 'button',
+                        text: 'Seleccionar imágen',
+                        id: 'myButton',
+                        value: null,
+
+                        onclick: function () {
+                          let mediaUploader;
+                          if (mediaUploader) {
+                            mediaUploader.open();
+                            return;
+                          }
+                          mediaUploader = wp.media.frames.fle_frame = wp.media({
+                            title: 'Añadir imágen centrada',
+                            button: {
+                              text: 'Añadir'
+                            },
+                            multiple: false
+                          })
+                          mediaUploader.on('select', function () {
+                            attachment = mediaUploader.state().get('selection').first().toJSON();
+                            let textBoxURL = document.querySelector('#textBoxURL');
+                            textBoxURL.value = attachment['url'];
+                          });
+                          mediaUploader.open();
+                        }
+                      },
+                    ],
+                    onsubmit: function (e) {
+                      editor.insertContent('<div class="row_ mt20 mb20">' +
+                          '<div class="col_-xxl-12 col_-xl-12 col_-md-12 col_-sm-12 col_xs-12 text-center">' +
+                          '<figure class="wp-caption aligncenter" style="width: ' + e.data.textBoxWidth + 'px;">' +
+                          '<a href="' + e.data.textBoxURL + '">' +
+                          '<img class="wp-image size-full" title="' + e.data.textBoxText + '" alt="' + e.data.textBoxText + '" src="' + e.data.textBoxURL + '" alt="' + e.data.textBoxText + '" />' +
+                          '</a>' +
+                          '<div class="wp-caption-text">' + e.data.textBoxText + '</div>' +
+                          '</figure>' +
+                          '</div>' +
+                          '</div>');
+                    },
+
+                  });
+                }
+              },
+              {
                 text: 'A la izquierda',
                 icon: ' be-ico_imgs_left',
                 onclick: function () {
